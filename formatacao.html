@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação e Citação</title>
+    <meta autor="André Coutinho">
+    <meta description="Tags de formatação de texto e como utilizalas para melhorar seu site">
+</head>
+<body>
+    <br>
+    <nav>
+        <ul>
+            <li><a href ='index.html' alt="Ir para a página inicial">Página Inicial</a></li>
+            <li><a href ='cabecalho.html' alt="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
+            <li><a href='formatacao.html' alt="Ir para a página que explica como formatar seu texto em HTML">Formatação e Citações</a></li>
+            <li><a href='links.html' alt="Ir para a página que explica como utilizar links em HTML">Links</a></li>
+            <li><a href='imagens.html' alt="Ir para a página que explica como utilizar imagens em HTML">Imagens</a></li>
+            <li><a href='Tabelas.html' alt="Ir para a página que explica como utilizar tabelas em HTML">Tabelas</a></li>
+            <li><a href='Formularios.html' alt="Ir para a página que explica como utilizar formulários em HTML">Formulários</a></li>
+            <li><a href='av.html' alt="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
+            <li><a href='iframe.html' alt="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
+            <li><a href='listas.html' alt="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
+            <li><a href="semantica.html" alt="Ir para a página que explica como escrever HTML da forma correta">semântica</a></li>
+        </ul>
+    </nav>
+    <br>
+    <h1>Estilização do texto através de Tags</h1>
+    <p>Tags de formatação de texto são utilizadas para formatar apropriadamente seu texto dentro de uma página HTML, coisas como deixar uma palavra em <b>negrito</b> ou deixar um texto <del>riscado</del> são feitas através destas tags. Abaixo há um texto detalhando melhor estas tags e como utilizá-las no seu projeto.</p>
+    <h2>Tags de formatação de texto</h2>
+    <p>Tags de formatação de texto formatam seu texto sem utilizar nenhum estilo em CSS, apesar de ser mais demoradas que utilizar um estilo inteiro em CSS elas conseguem ser muito bem utilizadas de maneira pontual no seu texto, a seguir há uma lista contendo as tags mais comuns para formatação de texto.</p>
+    <dl>
+        <dt><code>&lt;b&gt;</code>:</dt>
+        <dd>Tag responsável por marcar em negrito o texto. <br> Exemplo: <b>Texto em negrito</b></dd>
+        
+        <dt><code>&lt;strong&gt;</code>:</dt>
+        <dd>Tag responsável por marcar o texto de forma que ele tenha mais ênfase, num geral, será semelhante ao negrito em aparência, porém semânticamente o texto recebe um destaque maior. <br> Exemplo: <strong>Texto com tag strong</strong></dd>
+
+        <dt><code>&lt;i&gt;</code>:</dt>
+        <dd>Tag responsável por deixar o texto em itálico.<br> Exemplo: <i>Texto em itálico</i></dd>
+
+        <dt><code>&lt;u&gt;</code>:</dt>
+        <dd>Tag respondável por deixar o texto sublinhado.<br> Exemplo: <u>Texto sublinhado</u></dd>
+
+        <dt><code>&lt;small&gt;</code>:</dt>
+        <dd>Tag que formata o texto de uma maneira que ele fique levemente menor.<br> Exemplo: <small>Texto um pouco menor</small></dd>
+
+        <dt><code>&lt;del&gt;</code>:</dt>
+        <dd>Tag responsável por riscar o texto.<br> Exemplo: <del>Texto riscado</del></dd>
+
+        <dt><code>&lt;sup&gt;</code>:</dt>
+        <dd>Tag responsável pela escrita de expoentes.<br> Exemplo: 10<sup>2</sup>, 15<sup>8</sup>, 2<sup>10</sup></dd>
+
+        <dt><code>&lt;sub&gt;</code>:</dt>
+        <dd>Tag para texto escrito na parte inferior.<br> Exemplo: H<sub>2</sub>O, CO<sub>2</sub></dd>
+
+        <dt><code>&lt;mark&gt;</code>:</dt>
+        <dd>Tag responsável por marcar o texto como se fosse um marca-texto.<br> Exemplo: <mark>Texto marcado</mark></dd>
+
+        <dt><code>&lt;bdo&gt;</code>:</dt>
+        <dd>Tag responsável por escrever o texto em outra direção usando o atributo "dir" com os valores <b>rtl</b> (Direita para a esquerda) ou <b>ltr</b> (Esquerda para a direita).<br> Exemplos:<br> <bdo dir="rtl">Texto da direita para a esquerda</bdo><br> <bdo dir="ltr">Texto da esquerda para a direita</bdo></dd>
+
+        <dt><code>&lt;br&gt;</code>:</dt>
+        <dd>Tag responsável por fazer quebras de linha, apesar de não ser muito utilizada, ainda é muito útil para alguns projetos mais simples.</dd>
+    </dl>
+    <h3>Tags de Citação</h3>
+    <p>Tags de citação também formatam o texto, porém são apropriadas para serem usadas apenas em citações, abaixo á uma lista com as tags de citação e seus usos.</p>
+    <dl>
+        <dt><code>&lt;cite&gt;</code>:</dt>
+        <dd>Esta tag é responsável por marcar uma obra citada, seja um filme, livro, música, etc. <br> Exemplo: <cite>Titanic</cite>, <cite>Harry Potter</cite>, <cite>Imagine Dragons - Enemy</cite></dd>
+    
+        <dt><code>&lt;q&gt;</code>:</dt>
+        <dd>
+            Esta tag referencia uma fala ou frase de alguma pessoa, personagem ou obra. <br> Exemplo:<br> 
+            <q>I wake up to the sounds of the silence that allows</q> Imagine Dragons - Enemy
+            <br>
+            <q>Mil cairão a sua direita, dez mil a sua esquerda, mas você não será atingido</q> Salmo 91:7
+        </dd>
+        
+        <dt><code>&lt;blockquote&gt;</code>:</dt>
+        <dd>
+            Tag responsável por citar trechos grandes de texto, o deixando centralizado ao meio da página ou do container.<br> Exemplo:
+                <blockquote>
+                    1 Aquele que habita no esconderijo do Altíssimo, à sombra do Onipotente descansará.<br>
+                    2 Direi do Senhor: Ele é o meu Deus, o meu refúgio, a minha fortaleza, e nele confiarei.<br>
+                    3 Porque ele te livrará do laço do passarinheiro, e da peste perniciosa.<br>
+                    4 Ele te cobrirá com as suas penas, e debaixo das suas asas te confiarás; a sua verdade será o teu escudo e broquel.<br>
+                    5 Não terás medo do terror de noite nem da seta que voa de dia,.<br>
+                    6 Nem da peste que anda na escuridão, nem da mortandade que assola ao meio-dia.<br>
+                    7 Mil cairão ao teu lado, e dez mil à tua direita, mas não chegará a ti.<br>
+                    8 Somente com os teus olhos contemplarás, e verás a recompensa dos ímpios.<br>
+                    9 Porque tu, ó Senhor, és o meu refúgio. No Altíssimo fizeste a tua habitação.<br>
+                    10 Nenhum mal te sucederá, nem praga alguma chegará à tua tenda.<br>
+                    11 Porque aos seus anjos dará ordem a teu respeito, para te guardarem em todos os teus caminhos.<br>
+                    12 Eles te sustentarão nas suas mãos, para que não tropeces com o teu pé em pedra.<br>
+                    13 Pisarás o leão e a cobra; calcarás aos pés o filho do leão e a serpente.<br>
+                    14 Porquanto tão encarecidamente me amou, também eu o livrarei; pô-lo-ei em retiro alto, porque conheceu o meu nome.<br>
+                    15 Ele me invocará, e eu lhe responderei; estarei com ele na angústia; dela o retirarei, e o glorificarei.<br>
+                    16 Fartá-lo-ei com longura de dias, e lhe mostrarei a minha salvação.
+                </blockquote>
+        </dd>
+        <dt><code>&lt;abbr&gt;</code>:</dt>
+        <dd>Esta tag, apesar de não ser realmente uma citação, é utilizada para marcarmos abreviações no nosso texto, deixando uma caixa de texto com o texto completo.<br> Exemplo: <abbr title="HyperText Markup Language">HTML</abbr> ou <abbr title="Organização das Nações Unidas">ONU</abbr>.</dd>
+
+        <dt><code>&lt;addres&gt;</code>:</dt>
+        <dd>
+            Esta tag é uma tag que marca um endereço digital, como um e-mail, não é aconselhavel utiliza-lá para endereços físicos. <br> Exemplo:
+            <address>Emailaleatorio@gmail.com</address>
+        </dd>
+    </dl>
+</body>
+</html>
