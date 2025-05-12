@@ -3,122 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="autor" content="André Coutinho">
+    <meta name="author" content="André Coutinho">
     <meta name="description" content="Como fazre a utilização correta de tabelas em HTML">
     <title>tabelas</title>
 </head>
 <body>
-    <br>
-    <nav>
-        <ul>
-            <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
-            <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
-            <li><a href='formatacao.html' title="Ir para a página que explica como formatar seu texto em HTML">Formatação e Citações</a></li>
-            <li><a href='links.html' title="Ir para a página que explica como utilizar links em HTML">Links</a></li>
-            <li><a href='imagens.html' title="Ir para a página que explica como utilizar imagens em HTML">Imagens</a></li>
-            <li><a href='Tabelas.html' title="Ir para a página que explica como utilizar tabelas em HTML">Tabelas</a></li>
-            <li><a href='Formularios.html' title="Ir para a página que explica como utilizar formulários em HTML">Formulários</a></li>
-            <li><a href='av.html' title="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
-            <li><a href='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
-            <li><a href='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
-            <li><a href="semantica.html" title="Ir para a página que explica como escrever HTML da forma correta">semântica</a></li>
-        </ul>
-    </nav>
-    <h1>Como utilizar tabelas no seu site</h1>
-    <p>Tabelas podem ser extremamente úteis para mostrar diversas informações a seu usuário, desde valores de serviços a relações de dados específicos. O HTML nos proporciona uma maneira de implementá-las no nosso site de um modo simples, através de algumas tags e ajustes de informação.</p>
-    <p>Para utilizar tabelas, devemos implementar a tag <code>&lt;table&gt;</code>, a estrutura dela é semelhante a como listas funcionam, porém com algumas diferenças, no modo em que ela será exibida no site, variando conforme utilzá-mos suas tags. Abaixo há uma relação de cada tag que forma a tabela:</p>
-    <h2>Tags de formação da tabela</h2>
-    <dl>
-        <dt><code>&lt;table&gt;</code>:</dt>
-        <dd>Como dito anteriormente, esta é a tag de formação da tabela, todas as outras tags serão implementadas dentro desta tag. Ela possui alguns atributos simples como <code>width</code> e <code>border</code> que podem ser utilizados para formatar de maneira simples a tabela sem utilizar CSS.</dd>
-
-        <dt><code>&lt;tr&gt;</code>:</dt>
-        <dd>Esta é a tag responsável por criar linhas da tabela, as tags que formam as colunas estarão cituadas dentro desta tag.</dd>
-
-        <dt><code>&lt;th&gt;</code>:</dt>
-        <dd>Esta tag é responsável pelo nome no topo de cada coluna, como um cabeçalho, esta tag somente é usada na primeira linha da coluna onde definimos os dados que serão inseridos em cada uma.</dd>
-        
-        <dt><code>&lt;td&gt;</code>:</dt>
-        <dd>Esta é a tag responsável por cada célula da tabela, sendo adicionada a cada tag de linha para conter uma informação, seja nome, idade, Carro preferido, etc. É importante adicionar ela na mesma ordem que foi estabelecida na primeira linha, ou seja, se o nome foi adicionado como primeira coluna, o primeiro valor a ser adicionado em cada linha é o nome, se a idade foi adicionada como oitavo valor na primeira linha, ele deve ser o oitavo valor a ser adicionado em todas as linhas.</dd>
-    </dl>
-    <h2>Implementando uma tabela</h2>
-    <p>Utilizando as tags acima criei uma tabela simples contendo alguns valores, confira abaixo:</p>
-    <table>
-        <tr>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>Sexo</th>
-            <th>Profissão</th>
-        </tr>
-        <tr>
-            <td>Steve</td>
-            <td>Indefinido</td>
-            <td>Masculino</td>
-            <td>Minerador</td>
-        </tr>
-        <tr>
-            <td>Alex</td>
-            <td>Indefinido</td>
-            <td>Feminino</td>
-            <td>Exploradora</td>
-        </tr>
-        <tr>
-            <td>Carlos</td>
-            <td>26</td>
-            <td>Masculino</td>
-            <td>Encanador</td>
-        </tr>
-        <tr>
-            <td>Patrick</td>
-            <td>52</td>
-            <td>Masulino</td>
-            <td>Mergulhador</td>
-        </tr>
-        <tr>
-            <td>Bob</td>
-            <td>63</td>
-            <td>Masculino</td>
-            <td>Cozinheiro</td>
-        </tr>
-    </table>
-    <p>Exemplo com os atributos <code>width</code> e <code>border</code>:</p>
-    <table width="50%" border="3px">
-        <tr>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>Sexo</th>
-            <th>Profissão</th>
-        </tr>
-        <tr>
-            <td>Steve</td>
-            <td>Indefinido</td>
-            <td>Masculino</td>
-            <td>Minerador</td>
-        </tr>
-        <tr>
-            <td>Alex</td>
-            <td>Indefinido</td>
-            <td>Feminino</td>
-            <td>Exploradora</td>
-        </tr>
-        <tr>
-            <td>Carlos</td>
-            <td>26</td>
-            <td>Masculino</td>
-            <td>Encanador</td>
-        </tr>
-        <tr>
-            <td>Patrick</td>
-            <td>52</td>
-            <td>Masulino</td>
-            <td>Mergulhador</td>
-        </tr>
-        <tr>
-            <td>Bob</td>
-            <td>63</td>
-            <td>Masculino</td>
-            <td>Cozinheiro</td>
-        </tr>
-    </table>
+    <header>
+        <nav>
+            <ul>
+                <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
+                <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
+                <li><a href ='formatacao.html' title="Ir para a página que explica como formatar seu texto em HTML">Formatação e Citações</a></li>
+                <li><a href ='links.html' title="Ir para a página que explica como utilizar links em HTML">Links</a></li>
+                <li><a href ='imagens.html' title="Ir para a página que explica como utilizar imagens em HTML">Imagens</a></li>
+                <li><a href ='Tabelas.html' title="Ir para a página que explica como utilizar tabelas em HTML">Tabelas</a></li>
+                <li><a href ='Formularios.html' title="Ir para a página que explica como utilizar formulários em HTML">Formulários</a></li>
+                <li><a href ='av.html' title="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
+                <li><a href ='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
+                <li><a href ='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
+                <li><a href ='semantica.html' title="Ir para a página que explica como escrever HTML da forma correta">Semântica</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Como utilizar tabelas no seu site</h1>
+            <p>Tabelas podem ser extremamente úteis para mostrar diversas informações a seu usuário, desde valores de serviços a relações de dados específicos. O HTML nos proporciona uma maneira de implementá-las no nosso site de um modo simples, através de algumas tags e ajustes de informação.</p>
+            <p>Para utilizar tabelas, devemos implementar a tag <code>&lt;table&gt;</code>, a estrutura dela é semelhante a como listas funcionam, porém com algumas diferenças, no modo em que ela será exibida no site, variando conforme utilzá-mos suas tags. Abaixo há uma relação de cada tag que forma a tabela:</p>
+            <section>
+                <h2>Tags de formação da tabela</h2>
+                <dl>
+                    <dt><code>&lt;table&gt;</code>:</dt>
+                    <dd>Como dito anteriormente, esta é a tag de formação da tabela, todas as outras tags serão implementadas dentro desta tag. Ela possui alguns atributos simples como <code>width</code> e <code>border</code> que podem ser utilizados para formatar de maneira simples a tabela sem utilizar CSS.</dd>
+            
+                    <dt><code>&lt;tr&gt;</code>:</dt>
+                    <dd>Esta é a tag responsável por criar linhas da tabela, as tags que formam as colunas estarão cituadas dentro desta tag.</dd>
+            
+                    <dt><code>&lt;th&gt;</code>:</dt>
+                    <dd>Esta tag é responsável pelo nome no topo de cada coluna, como um cabeçalho, esta tag somente é usada na primeira linha da coluna onde definimos os dados que serão inseridos em cada uma.</dd>
+                    
+                    <dt><code>&lt;td&gt;</code>:</dt>
+                    <dd>Esta é a tag responsável por cada célula da tabela, sendo adicionada a cada tag de linha para conter uma informação, seja nome, idade, Carro preferido, etc. É importante adicionar ela na mesma ordem que foi estabelecida na primeira linha, ou seja, se o nome foi adicionado como primeira coluna, o primeiro valor a ser adicionado em cada linha é o nome, se a idade foi adicionada como oitavo valor na primeira linha, ele deve ser o oitavo valor a ser adicionado em todas as linhas.</dd>
+                </dl>
+            </section>
+            <section>
+                <h2>Implementando uma tabela</h2>
+                <p>Utilizando as tags acima criei uma tabela simples contendo alguns valores, confira abaixo:</p>
+                <table>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Sexo</th>
+                        <th>Profissão</th>
+                    </tr>
+                    <tr>
+                        <td>Steve</td>
+                        <td>Indefinido</td>
+                        <td>Masculino</td>
+                        <td>Minerador</td>
+                    </tr>
+                    <tr>
+                        <td>Alex</td>
+                        <td>Indefinido</td>
+                        <td>Feminino</td>
+                        <td>Exploradora</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos</td>
+                        <td>26</td>
+                        <td>Masculino</td>
+                        <td>Encanador</td>
+                    </tr>
+                    <tr>
+                        <td>Patrick</td>
+                        <td>52</td>
+                        <td>Masulino</td>
+                        <td>Mergulhador</td>
+                    </tr>
+                    <tr>
+                        <td>Bob</td>
+                        <td>63</td>
+                        <td>Masculino</td>
+                        <td>Cozinheiro</td>
+                    </tr>
+                </table>
+                <p>Exemplo com os atributos <code>width</code> e <code>border</code>:</p>
+                <table width="50%" border="3px">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Sexo</th>
+                        <th>Profissão</th>
+                    </tr>
+                    <tr>
+                        <td>Steve</td>
+                        <td>Indefinido</td>
+                        <td>Masculino</td>
+                        <td>Minerador</td>
+                    </tr>
+                    <tr>
+                        <td>Alex</td>
+                        <td>Indefinido</td>
+                        <td>Feminino</td>
+                        <td>Exploradora</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos</td>
+                        <td>26</td>
+                        <td>Masculino</td>
+                        <td>Encanador</td>
+                    </tr>
+                    <tr>
+                        <td>Patrick</td>
+                        <td>52</td>
+                        <td>Masulino</td>
+                        <td>Mergulhador</td>
+                    </tr>
+                    <tr>
+                        <td>Bob</td>
+                        <td>63</td>
+                        <td>Masculino</td>
+                        <td>Cozinheiro</td>
+                    </tr>
+                </table>
+            </section>
+        </article>
+    </main>
 </body>
 </html>

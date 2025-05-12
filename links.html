@@ -4,44 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links</title>
-    <meta name="autor" content="André Coutinho">
+    <meta name="author" content="André Coutinho">
     <meta name="description" content="O que são links e como incorporá-los no seu site">
 </head>
 <body>
-    <br>
-    <nav>
-        <ul>
-            <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
-            <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
-            <li><a href='formatacao.html' title="Ir para a página que explica como formatar seu texto em HTML">Formatação e Citações</a></li>
-            <li><a href='links.html' title="Ir para a página que explica como utilizar links em HTML">Links</a></li>
-            <li><a href='imagens.html' title="Ir para a página que explica como utilizar imagens em HTML">Imagens</a></li>
-            <li><a href='Tabelas.html' title="Ir para a página que explica como utilizar tabelas em HTML">Tabelas</a></li>
-            <li><a href='Formularios.html' title="Ir para a página que explica como utilizar formulários em HTML">Formulários</a></li>
-            <li><a href='av.html' title="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
-            <li><a href='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
-            <li><a href='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
-            <li><a href="semantica.html" title="Ir para a página que explica como escrever HTML da forma correta">semântica</a></li>
-        </ul>
-    </nav>
-    <h1>O que são links e como utilizá-los</h1>
-    <p>
-        Links nada mais são do que caminhos que existem na internet, ou melhor, endereços, cada endereço é responsável por uma página na internet e através destes endereços conseguimos navegar adequadamente na internet. Os links podem ser divididos em dois tipos, links relativos e links absolutos.
+    <header>
+        <nav>
+            <ul>
+                <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
+                <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
+                <li><a href ='formatacao.html' title="Ir para a página que explica como formatar seu texto em HTML">Formatação e Citações</a></li>
+                <li><a href ='links.html' title="Ir para a página que explica como utilizar links em HTML">Links</a></li>
+                <li><a href ='imagens.html' title="Ir para a página que explica como utilizar imagens em HTML">Imagens</a></li>
+                <li><a href ='Tabelas.html' title="Ir para a página que explica como utilizar tabelas em HTML">Tabelas</a></li>
+                <li><a href ='Formularios.html' title="Ir para a página que explica como utilizar formulários em HTML">Formulários</a></li>
+                <li><a href ='av.html' title="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
+                <li><a href ='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
+                <li><a href ='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
+                <li><a href ='semantica.html' title="Ir para a página que explica como escrever HTML da forma correta">Semântica</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>O que são links e como utilizá-los</h1>
+        <p>Links nada mais são do que caminhos que existem na internet, ou melhor, endereços, cada endereço é responsável por uma página na internet e através destes endereços conseguimos navegar adequadamente na internet. Os links podem ser divididos em dois tipos, links relativos e links absolutos.</p>
         <h2>Links absolutos</h2>
-        <p>
-            Links absolutos são links que apontam para um endereço web específico, um endereço absoluto, são utilizados quando queremos anexar links de algum outro site ao nosso ou redirecionar o usuário a outro site. Um exemplo: <a href="https://www.youtube.com.br">Link para o Youtube</a>, <a href="https://www.google.com.br">Link para o google</a>
-        </p>
+        <p>Links absolutos são links que apontam para um endereço web específico, um endereço absoluto, são utilizados quando queremos anexar links de algum outro site ao nosso ou redirecionar o usuário a outro site. Um exemplo: <a href="https://www.youtube.com.br">Link para o Youtube</a>, <a href="https://www.google.com.br">Link para o google</a></p>
         <h2>Links relativos</h2>
-        <p>
-            Links relativos são links que apontam para páginas dentro do seu site, ao invés de termos um link propriamente(como www.google.com.br) temos um caminho para um arquivo dentro do seu projeto que o levará a uma outra página, estes links estão presentes em todo site através de menus, botões e outras implementações. Um exemplo claro de implementação destes tipos de links é o menu deste site, que foi feito usando apenas links relativos.
-        </p>
-        <h2>Como implementalos no seu site</h2>
-        <p>
-            Links são implementados através de uma tag de ancora(<code>&lt;a&gt;</code>), nesta tag possuímos o atributo "href" que é onde colocamos o link que irá marcar no texto. <br>Exemplos de código com links:<br><br>
-            Link absoluto: <code>&lt;a href="https:www.google.com.br"&gt;</code> Texto marcado como link <code>&lt;/a&gt;</code>
-            <br><br>
-            Link relativo: <code>&lt;a href="pasta-projeto/paginas/index.html"&gt;</code> Texto marcado como link <code>&lt;/a&gt;</code>
-        </p>
-    </p>
+        <p>Links relativos são links que apontam para páginas dentro do seu site, ao invés de termos um link propriamente(como www.google.com.br) temos um caminho para um arquivo dentro do seu projeto que o levará a uma outra página, estes links estão presentes em todo site através de menus, botões e outras implementações. Um exemplo claro de implementação destes tipos de links é o menu deste site, que foi feito usando apenas links relativos.</p>
+        <h2>Como implementa-los no seu site</h2>
+        <p>Links são implementados através de uma tag de âncora(<code>&lt;a&gt;</code>), nesta tag possuímos o atributo "href" que é onde colocamos o link que irá marcar no texto.</p>
+        <p>Exemplo de link absoluto: <code>&lt;a href="https://www.google.com.br"&gt;Texto marcado como link&lt;/a&gt;</code></p>
+        <p>Exemplo de link relativo: <code>&lt;a href="pasta-projeto/paginas/index.html"&gt;Texto marcado como link&lt;/a&gt;</code></p>
+    </main>
 </body>
 </html>
