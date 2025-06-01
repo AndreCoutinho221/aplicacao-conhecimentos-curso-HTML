@@ -6,54 +6,53 @@
     <title>Página Inicial</title>
     <meta name="author" content="André Coutinho">
     <meta name="description" content="Este é um site básico com a aplicação de conceitos de uma vídeoaula">
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
-                <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
-                <li><a href ='formatacao.html' title="Ir para a página que explica como formatar seu texto em HTML">Formatação e Citações</a></li>
-                <li><a href ='links.html' title="Ir para a página que explica como utilizar links em HTML">Links</a></li>
-                <li><a href ='imagens.html' title="Ir para a página que explica como utilizar imagens em HTML">Imagens</a></li>
-                <li><a href ='Tabelas.html' title="Ir para a página que explica como utilizar tabelas em HTML">Tabelas</a></li>
-                <li><a href ='Formularios.html' title="Ir para a página que explica como utilizar formulários em HTML">Formulários</a></li>
-                <li><a href ='av.html' title="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
-                <li><a href ='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
-                <li><a href ='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
-<<<<<<< HEAD
-                <li><a href ="semantica.html" title="Ir para a página que explica como escrever HTML da forma correta">Semântica</a></li>
-=======
-                <li><a href ='semantica.html' title="Ir para a página que explica como escrever HTML da forma correta">Semântica</a></li>
->>>>>>> 71d968ad433850563a58e1b9debd9c328c3fc4ef
-            </ul>
-        </nav>
-    </header>
+<body class="flex column flex-center bg">
     <main>
         <!--Antes dos estilos CSS-->
-        <h1>Página Inicial - Descrição básica do site</h1>
-        <p>Este site está sendo desenvolvido como exercício de fixação para uma vídeoaula de HTML, o canal da vídeoaula é o <a href="https://www.youtube.com/@programacaoweb" target="_blank"> Programação Web</a> onde utilizei o video <a href="https://www.youtube.com/watch?v=nPEpaft1y1k&ab_channel=Programa%C3%A7%C3%A3oWeb" target="_blank">Curso HTML Completo (4 Horas)</a> que ensina apenas a programação voltada a HTML básico, sem nenhum estilização muito complicada e com uma abordagem rasa ou nula de CSS.</p>
-        <p><b>Duração do vídeo:</b> 4h 14m 6s</p>
-        <p><b>Data de início:</b> 05/12/24</p>
-        <p><b>Data de término:</b> 17/12/24</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/nPEpaft1y1k?si=DBu6FPGx6Skkn2lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <h2>Conceitos abordados neste Curso</h2>
-        <ul>
-            <li>Criação de uma página HTML do zero</li>
-            <li>Explicação de Meta tags utilizdas no <code>&lt;head&gt;</code></li>
-            <li>Tags de formatação de texto</li>
-            <li>Tags de Citação</li>
-            <li>Comentários na linguagem</li>
-            <li>Links de navegação</li>
-            <li>Como utilizar imagens no seu site</li>
-            <li>Trabalhando com tabelas e adicionando valores</li>
-            <li>Trabalhando com listas ordenadas e não ordenadas</li>
-            <li>Utilização de Iframes</li>
-            <li>Trabalhando com formulários de modo básico</li>
-            <li>Utilização de áudios no site</li>
-            <li>Utilização de vídeos no site</li>
-            <li>Utilização de Divs e como escrever o HTML na semântica correta</li>
-        </ul>
+        <section class="start-screen scroll flex column flex-center">
+            <h1 class="white text-center">Página Inicial - Descrição básica do site</h1>
+            <p class="white link-def">Este site está sendo desenvolvido como exercício de fixação para uma vídeoaula de HTML, o canal da vídeoaula é o <a href="https://www.youtube.com/@programacaoweb" target="_blank"> Programação Web</a> onde utilizei o video <a href="https://www.youtube.com/watch?v=nPEpaft1y1k&ab_channel=Programa%C3%A7%C3%A3oWeb" target="_blank">Curso HTML Completo (4 Horas)</a> que ensina apenas a programação voltada a HTML básico, sem nenhum estilização muito complicada e com uma abordagem rasa ou nula de CSS.</p>
+            <p class="white values"><b>Duração do vídeo:</b> 4h 14m 6s</p>
+            <p class="white values"><b>Data de início:</b> 05/12/24</p>
+            <p class="white values"><b>Data de término:</b> 17/12/24</p>
+            <iframe class="video" src="https://www.youtube.com/embed/nPEpaft1y1k?si=DBu6FPGx6Skkn2lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section class="content main-content scroll">
+            <h2 class="text-center white">Conceitos abordados neste Curso</h2>
+            <ul class="list white">
+                <li>Criação de uma página HTML do zero</li>
+                <li>Explicação de Meta tags utilizdas no <code>&lt;head&gt;</code></li>
+                <li>Tags de formatação de texto</li>
+                <li>Tags de Citação</li>
+                <li>Comentários na linguagem</li>
+                <li>Links de navegação</li>
+                <li>Como utilizar imagens no seu site</li>
+                <li>Trabalhando com tabelas e adicionando valores</li>
+                <li>Trabalhando com listas ordenadas e não ordenadas</li>
+                <li>Utilização de Iframes</li>
+                <li>Trabalhando com formulários de modo básico</li>
+                <li>Utilização de áudios no site</li>
+                <li>Utilização de vídeos no site</li>
+                <li>Utilização de Divs e como escrever o HTML na semântica correta</li>
+            </ul>
+            <nav>
+                <ul class="grid navegador-inicial text-center">
+                    <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
+                    <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
+                    <li><a href ='formatacao.html' title="Ir para a página que explica como formatar seu texto em HTML">Formatação e Citações</a></li>
+                    <li><a href ='links.html' title="Ir para a página que explica como utilizar links em HTML">Links</a></li>
+                    <li><a href ='imagens.html' title="Ir para a página que explica como utilizar imagens em HTML">Imagens</a></li>
+                    <li><a href ='Tabelas.html' title="Ir para a página que explica como utilizar tabelas em HTML">Tabelas</a></li>
+                    <li><a href ='Formularios.html' title="Ir para a página que explica como utilizar formulários em HTML">Formulários</a></li>
+                    <li><a href ='av.html' title="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
+                    <li><a href ='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
+                    <li><a href ='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
+                    <li><a href ="semantica.html" title="Ir para a página que explica como escrever HTML da forma correta">Semântica</a></li>
+                </ul>
+            </nav>
+        </section>
     </main>
 </body>
 </html>

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+html{
+  scroll-snap-type: y mandatory;
+  scroll-behavior:smooth;
+  overflow-y: scroll;
+}
+
+.start-screen{
+    height: 100vh;
+    width: 99vw;
+    background-image: linear-gradient(-145deg, rgb(123, 83, 153), rgb(55, 23, 80));
+}
+
+.start-screen p{
+    width: 50%;
+    text-align: justify;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.start-screen .values{
+    text-align: center;
+    display: inline;
+}
+
+.video{
+    height: 500px;
+    width: 80%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.start-screen h1{
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 80px;
+}
+
+.scroll{
+    scroll-snap-align: start;
+}
+
+.content{
+    min-height: 100vh;
+}
+
+.link-def a{
+    color: white;
+    font-weight: 600;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+}
+
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.flex-center{
+    align-items: center;
+}
+
+.navegador-inicial{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    list-style-type: none;
+    gap:20px;
+    place-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(145deg, rgb(160, 129, 185), rgb(123, 83, 153) );
+}
+
+.navegador-inicial a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+    background-color: rgba(223, 190, 250, 0.75);
+    border-radius: 10px;
+    color:rgb(33, 22, 41);
+    font-size: 24px;
+    box-shadow: 3px 5px 15px rgb(40, 4, 73);
+    transition: 0.5s ease-in-out;   
+}
+
+.main-content{
+    width: 75%;
+    min-width: 576px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    height: 100%;
+    margin: auto;
+}
+
+.bg{
+    background-image: linear-gradient(145deg, rgb(123, 83, 153), rgb(55, 23, 80));
+}
+
+.list{
+    text-decoration: none;
+    list-style: none;
+}
+
+.white{
+    color: white;
+}
+
+.navegador-inicial a:hover{
+    background-color: rgba(223, 190, 250, 1);
+    scale: 105%;
+    box-shadow: 5px 7px 20px rgb(40, 4, 73);
+    font-weight: 500;
+}
