@@ -8,87 +8,96 @@
     <meta name="description" content="Como trabalhar com audios e vídeos em HTML">
 </head>
 <body>
-    <br>
-    <nav>
-        <ul>
-            <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
-            <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
-            <li><a href='formatacao.html' title="Ir para a página que explica como formatar seu texto em HTML">Formatação e Citações</a></li>
-            <li><a href='links.html' title="Ir para a página que explica como utilizar links em HTML">Links</a></li>
-            <li><a href='imagens.html' title="Ir para a página que explica como utilizar imagens em HTML">Imagens</a></li>
-            <li><a href='Tabelas.html' title="Ir para a página que explica como utilizar tabelas em HTML">Tabelas</a></li>
-            <li><a href='Formularios.html' title="Ir para a página que explica como utilizar formulários em HTML">Formulários</a></li>
-            <li><a href='av.html' title="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
-            <li><a href='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
-            <li><a href='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
-            <li><a href="semantica.html" title="Ir para a página que explica como escrever HTML da forma correta">semântica</a></li>
-        </ul>
-    </nav>
-    <h1>Audio e Vídeo em HTML</h1>
-    <p>Assim como as imagens, o HTML também consegue incorporar arquivos de audio e video em sua página de maneira nativa sem muitas dificuldades, confira abaixo como trabalhar com cada uma dessas mídias.</p>
-    <h2>Trabalhando com audios</h2>
-    <p>Conforme dito anteriormente, o HTML consegue incorporar nativamente este tipo de mídia, usando a tag <code>&lt;audio&gt;</code> conseguimos incorporá-lo corretamente no nosso site definindo um campo de áudio na nossa página. Após definirmos a área do audio, é necessário utilizar mais uma tag dentro do campo para definirmos a mídia que será utilizada, esta tag é a <code>&lt;source&gt;</code>, através do atributo <code>src</code> dela definimos o arquivo que será reproduzido, além disso utilziando o atributo <code>type</code> definimos o tipo de arquivo de audio estamos usando, como mp3, ogg, etc. Confira abaixo um exemplo de código da aplicação e também uma aplicação prática:</p>
-    <p>Código:</p>
-    <code>
-        &lt;audio controls&gt;<br>
-            &nbsp;&lt;source src="source/audio/audio.mp3" type="audio/mpeg"&gt;<br>
-        &lt;/audio&gt;<br>
-    </code>
-    <br>
-    <p>Aplicação do código:</p>
-    <audio controls>
-            <source src="source/audio/audio.mp3" type="audio/mpeg">
-    </audio>
-    <h2>Trabalhando com vídeos</h2>
-    <p>Apesar de ser um tipo de arquivo diferente, a implementação de vídeos é semelhante a de áudios, apenas com a mudança da tag para a de video que é <code>&lt;video&gt;</code>, usando a mesma estrutura e fazendo uso também da tag <code>&lt;source&gt;</code>. Confira abaixo um exemplo de código e também uma aplicação prática:</p>
-    <p>Código:</p>
-    <code>
-        &lt;video controls width="300px"&gt;<br>
-            &nbsp;&lt;source src="source/video/exemplo-video-html.mp4" type="video/mp4"&gt;<br>
-        &lt;/video&gt;<br>
-    </code>
-    <br>
-    <p>Aplicação do código:</p>
-    <video controls width="300px">
-        <source src="source/video/exemplo-video-html.mp4" type="video/mp4">
-    </video>
-    <h2>Tag <code>&lt;source&gt;</code> e outros atributos das tags de audio e vídeo</h2>
-    <p>Se repararmos bem, há alguns outros termos escritos tanto na tag <code>&lt;source&gt;</code> quanto nas tags de áudio e video que são extremamente importantes para o funcionamento dessas tags apropriadamente, abaixo há uma lista descrevendo estes atributos e o que eles exatamente fazem em suas tags.</p>
-    <dl>
-        <dt>Atributo <code>type</code>:</dt>
-        <dd>A tag <code>&lt;source&gt;</code> possui um atributo muito importante que define o tipo de arquivo que estamos passando para a tag de audio ou vídeo, ele é definido por <code>type="audio/tipo de arquivo"</code> ou por <code>type="video/tipo de arquivo"</code>. As extenções que o tipo audio suportam são: mpeg(mp3), ogg, wav, webm, aac, flac, x-ms-wma, midi e x-midi. Já as extenções que o tipo de vídeo suportam são: mp4, webm, ogg, x-msvideo, 3gpp, 3gpp2, x-matroska, x-ms-wmv, mpeg e quicktime.<br>
-        Tendo em vista a quantidade de arquivos suportados, podemos fazer diversas escolhas de como utilizá-los em nosso site, há arquivos que são mais amplamente suportados pelos navegados, arquivos que possuem uma qualidade maior e arquivos que possuem tamanhos menores e auxiliam no carregamento, além disso uma mesma tag de audio ou de vídeo podem conter mais de uma tag <code>&lt;source&gt;</code>, dando mais opções de tipos de arquivos que podem ser reproduzidos por uma mesma tag, aumentando a compatibilidade com os navegadores.</dd>
-        <br>
-        <dt>Atributo <code>controls</code>:</dt>
-        <dd>O atributo <code>controls</code> é extremamente necessário para a exibição tanto de audios quanto de vídeos, ela habilita os controles padrões de vídeos e audios como play, pause, volume, etc.. Apesar de não ser um atributo obrigatório, ele é extremamente recomendado para ser utilizado, pois ele habilita os controles para o usuário poder interagir com o conteúdo, caso não seja utilizado é recomendado fornecer outros tipos de controles para o usuário poder interagir com o conteúdo, caso não sejam fornecidos e não seja usada nenhuma outro atributo que viabilize a exibição do conteúdo, a mídia não será exibida na página.</dd>
-        <br>
-        <dt>Atributo <code>autoplay</code>:</dt>
-        <dd>Este atributo é um dos que viabiliza a exibição do conteúdo, ele faz com que o audio ou vídeo seja iniciado automaticamente quando o usuário abre a página, não habilitando controles para o usuário. Alguns navegadores bloqueiam este atributo para melhorar a exeriência do usuário, permitindo que o usuário veja apenas conteúdo que ele ativamente iniciou.</dd>
-        <br>
-        <dt>Atributo <code>loop</code>:</dt>
-        <dd>Este atributo faz com que a mídia seja tocada em loop, reiniciando toda vez que acaba.</dd>
-        <br>
-        <dt>Atributo <code>muted</code>:</dt>
-        <dd>Este atributo faz com que o audio ou vídeo seja iniciado com o volume mutado, sem nenhum audio.</dd>
-        <br>
-        <dt>Atributo <code>preload</code>:</dt>
-        <dd>Este atributo define o modo que a mídea é carregada na página, se o valor for <code>none</code>, o arquivo não será carregado antes de ser reproduzido, se for <code>metadata</code>, carregará apenas os metadados do arquivo, como a duração por exemplo, se for <code>auto</code>, irá precarregar o arquivo completo, este é o valor padrão.</dd>
-        <br>
-        <dt>Atributo <code>src</code>:</dt>
-        <dd>Apesar da existência da tag <code>&lt;source&gt;</code>, as tags de audio e video também podem receber seus arquivos através do atributo <code>src</code> como as tags de imagem, não sendo necessário usar o atributo <code>type</code>.</dd>
-        <br>
-        <dt>Atributos <code>width</code> e <code>height</code>:</dt>
-        <dd>Estes atributos são os mesmo utilizados nas tags de imagem, sendo usados nas tags de vídeo para definir a altura e largura que o vídeo será exibido.</dd>
-        <br>
-        <dt>Atributo <code>poster</code></dt>
-        <dd>Este atributo define uma capa para o vídeo enquanto ele não é reproduzido, funciona da mesma maneira que uma tumbnail do youtube.</dd>
-        <br>
-        <dt>Atributo <code>playsinline</code>:</dt>
-        <dd>Este atributo indica que o vídeo deve ser reproduzido em linha (dentro da página) e não em tela cheia, principalmente para dispositivos móveis.</dd>
-        <br>
-        <dt>Atributo <code>controllist</code>:</dt>
-        <dd>Este atributo define quais controles padrão serão exibidos para o usuário através de alguns parâmetros. O parâmetro <code>nodownload</code> irá remover o botão de download dos controles, o <code>nofullscreen</code> retira o botão para colocar o vídeo em tela cheia, o <code>noremoteplayback</code> desabilita a transmissão da mídea para outros dispositivos, o <code>disablepictureinpicture</code> desabilita o modo picture-in-picture. Para adicionarmos estes parametros, podemos apenas coloca-los um ao lado do outro com apenas um espaço dentro do atributo <code>controllist</code>, exemplo: <code>controlist="nodownload nofullscreen"</code></dd>
-        <br>
-    </dl>
+    <header>
+        <nav>
+            <ul>
+                <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
+                <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
+                <li><a href ='formatacao.html' title="Ir para a página que explica como formatar seu texto em HTML">Formatação e Citações</a></li>
+                <li><a href ='links.html' title="Ir para a página que explica como utilizar links em HTML">Links</a></li>
+                <li><a href ='imagens.html' title="Ir para a página que explica como utilizar imagens em HTML">Imagens</a></li>
+                <li><a href ='Tabelas.html' title="Ir para a página que explica como utilizar tabelas em HTML">Tabelas</a></li>
+                <li><a href ='Formularios.html' title="Ir para a página que explica como utilizar formulários em HTML">Formulários</a></li>
+                <li><a href ='av.html' title="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
+                <li><a href ='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
+                <li><a href ='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
+                <li><a href ='semantica.html' title="Ir para a página que explica como escrever HTML da forma correta">Semântica</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Audio e Vídeo em HTML</h1>
+        <p>Assim como as imagens, o HTML também consegue incorporar arquivos de audio e video em sua página de maneira nativa sem muitas dificuldades, confira abaixo como trabalhar com cada uma dessas mídias.</p>
+        <section>
+            <h2>Trabalhando com audios</h2>
+            <p>Conforme dito anteriormente, o HTML consegue incorporar nativamente este tipo de mídia, usando a tag <code>&lt;audio&gt;</code> conseguimos incorporá-lo corretamente no nosso site definindo um campo de áudio na nossa página. Após definirmos a área do audio, é necessário utilizar mais uma tag dentro do campo para definirmos a mídia que será utilizada, esta tag é a <code>&lt;source&gt;</code>, através do atributo <code>src</code> dela definimos o arquivo que será reproduzido, além disso utilziando o atributo <code>type</code> definimos o tipo de arquivo de audio estamos usando, como mp3, ogg, etc. Confira abaixo um exemplo de código da aplicação e também uma aplicação prática:</p>
+            <p>Código:</p>
+            <code>
+                &lt;audio controls&gt;<br>
+                    &nbsp;&lt;source src="source/audio/audio.mp3" type="audio/mpeg"&gt;<br>
+                &lt;/audio&gt;<br>
+            </code>
+            <br>
+            <p>Aplicação do código:</p>
+            <audio controls>
+                    <source src="source/audio/audio.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+        <section>
+            <h2>Trabalhando com vídeos</h2>
+            <p>Apesar de ser um tipo de arquivo diferente, a implementação de vídeos é semelhante a de áudios, apenas com a mudança da tag para a de video que é <code>&lt;video&gt;</code>, usando a mesma estrutura e fazendo uso também da tag <code>&lt;source&gt;</code>. Confira abaixo um exemplo de código e também uma aplicação prática:</p>
+            <p>Código:</p>
+            <code>
+                &lt;video controls width="300px"&gt;<br>
+                    &nbsp;&lt;source src="source/video/exemplo-video-html.mp4" type="video/mp4"&gt;<br>
+                &lt;/video&gt;<br>
+            </code>
+            <br>
+            <p>Aplicação do código:</p>
+            <video controls width="300px">
+                <source src="source/video/exemplo-video-html.mp4" type="video/mp4">
+            </video>
+        </section>
+        <section>
+            <h2>Tag <code>&lt;source&gt;</code> e outros atributos das tags de audio e vídeo</h2>
+            <p>Se repararmos bem, há alguns outros termos escritos tanto na tag <code>&lt;source&gt;</code> quanto nas tags de áudio e video que são extremamente importantes para o funcionamento dessas tags apropriadamente, abaixo há uma lista descrevendo estes atributos e o que eles exatamente fazem em suas tags.</p>
+            <dl>
+                <dt>Atributo <code>type</code>:</dt>
+                <dd>A tag <code>&lt;source&gt;</code> possui um atributo muito importante que define o tipo de arquivo que estamos passando para a tag de audio ou vídeo, ele é definido por <code>type="audio/tipo de arquivo"</code> ou por <code>type="video/tipo de arquivo"</code>. As extenções que o tipo audio suportam são: mpeg(mp3), ogg, wav, webm, aac, flac, x-ms-wma, midi e x-midi. Já as extenções que o tipo de vídeo suportam são: mp4, webm, ogg, x-msvideo, 3gpp, 3gpp2, x-matroska, x-ms-wmv, mpeg e quicktime.<br>
+                Tendo em vista a quantidade de arquivos suportados, podemos fazer diversas escolhas de como utilizá-los em nosso site, há arquivos que são mais amplamente suportados pelos navegados, arquivos que possuem uma qualidade maior e arquivos que possuem tamanhos menores e auxiliam no carregamento, além disso uma mesma tag de audio ou de vídeo podem conter mais de uma tag <code>&lt;source&gt;</code>, dando mais opções de tipos de arquivos que podem ser reproduzidos por uma mesma tag, aumentando a compatibilidade com os navegadores.</dd>
+                <br>
+                <dt>Atributo <code>controls</code>:</dt>
+                <dd>O atributo <code>controls</code> é extremamente necessário para a exibição tanto de audios quanto de vídeos, ela habilita os controles padrões de vídeos e audios como play, pause, volume, etc.. Apesar de não ser um atributo obrigatório, ele é extremamente recomendado para ser utilizado, pois ele habilita os controles para o usuário poder interagir com o conteúdo, caso não seja utilizado é recomendado fornecer outros tipos de controles para o usuário poder interagir com o conteúdo, caso não sejam fornecidos e não seja usada nenhuma outro atributo que viabilize a exibição do conteúdo, a mídia não será exibida na página.</dd>
+                <br>
+                <dt>Atributo <code>autoplay</code>:</dt>
+                <dd>Este atributo é um dos que viabiliza a exibição do conteúdo, ele faz com que o audio ou vídeo seja iniciado automaticamente quando o usuário abre a página, não habilitando controles para o usuário. Alguns navegadores bloqueiam este atributo para melhorar a exeriência do usuário, permitindo que o usuário veja apenas conteúdo que ele ativamente iniciou.</dd>
+                <br>
+                <dt>Atributo <code>loop</code>:</dt>
+                <dd>Este atributo faz com que a mídia seja tocada em loop, reiniciando toda vez que acaba.</dd>
+                <br>
+                <dt>Atributo <code>muted</code>:</dt>
+                <dd>Este atributo faz com que o audio ou vídeo seja iniciado com o volume mutado, sem nenhum audio.</dd>
+                <br>
+                <dt>Atributo <code>preload</code>:</dt>
+                <dd>Este atributo define o modo que a mídea é carregada na página, se o valor for <code>none</code>, o arquivo não será carregado antes de ser reproduzido, se for <code>metadata</code>, carregará apenas os metadados do arquivo, como a duração por exemplo, se for <code>auto</code>, irá precarregar o arquivo completo, este é o valor padrão.</dd>
+                <br>
+                <dt>Atributo <code>src</code>:</dt>
+                <dd>Apesar da existência da tag <code>&lt;source&gt;</code>, as tags de audio e video também podem receber seus arquivos através do atributo <code>src</code> como as tags de imagem, não sendo necessário usar o atributo <code>type</code>.</dd>
+                <br>
+                <dt>Atributos <code>width</code> e <code>height</code>:</dt>
+                <dd>Estes atributos são os mesmo utilizados nas tags de imagem, sendo usados nas tags de vídeo para definir a altura e largura que o vídeo será exibido.</dd>
+                <br>
+                <dt>Atributo <code>poster</code></dt>
+                <dd>Este atributo define uma capa para o vídeo enquanto ele não é reproduzido, funciona da mesma maneira que uma tumbnail do youtube.</dd>
+                <br>
+                <dt>Atributo <code>playsinline</code>:</dt>
+                <dd>Este atributo indica que o vídeo deve ser reproduzido em linha (dentro da página) e não em tela cheia, principalmente para dispositivos móveis.</dd>
+                <br>
+                <dt>Atributo <code>controllist</code>:</dt>
+                <dd>Este atributo define quais controles padrão serão exibidos para o usuário através de alguns parâmetros. O parâmetro <code>nodownload</code> irá remover o botão de download dos controles, o <code>nofullscreen</code> retira o botão para colocar o vídeo em tela cheia, o <code>noremoteplayback</code> desabilita a transmissão da mídea para outros dispositivos, o <code>disablepictureinpicture</code> desabilita o modo picture-in-picture. Para adicionarmos estes parametros, podemos apenas coloca-los um ao lado do outro com apenas um espaço dentro do atributo <code>controllist</code>, exemplo: <code>controlist="nodownload nofullscreen"</code></dd>
+                <br>
+            </dl>
+        </section>
+    </main>
 </body>
 </html>

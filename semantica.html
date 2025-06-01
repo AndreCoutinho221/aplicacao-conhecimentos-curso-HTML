@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semântica</title>
-    <meta name="autor" content="André Coutinho">
+    <meta name="author" content="André Coutinho">
     <meta name="description" content="Como escrever corretamente a linguagem HTML">
 </head>
 <body>
@@ -21,7 +21,11 @@
                 <li><a href ='av.html' title="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
                 <li><a href ='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
                 <li><a href ='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
+<<<<<<< HEAD
                 <li><a href ="semantica.html" title="Ir para a página que explica como escrever HTML da forma correta">Semântica</a></li>
+=======
+                <li><a href ='semantica.html' title="Ir para a página que explica como escrever HTML da forma correta">Semântica</a></li>
+>>>>>>> 71d968ad433850563a58e1b9debd9c328c3fc4ef
             </ul>
         </nav>
     </header>
@@ -38,13 +42,42 @@
             <h2>Entendo a semântica</h2>
             <p>Assim como outras linguagens, o HTML possui regras de escrita e de semântica para podermos utilizar a linguagem corretamente, há tags que devem ser utilizadas em determinados locais e há as que não podem ser utilizadas por não serem apropriadas para o uso naquele momento. Cada uma destas tags tem funções distintas que podem variar muito com base na pessoa que interpreta o conteúdo do seu site, que é por onde começamos a planejar a utilização das tags e onde elas devem e não devem ser usadas.</p>
             <section>
-                <h2>Estilização</h2>
+                <h3>Estilização</h3>
                 <p>Como dito acima, há tags que devem ser utilizadas para determinados fins e outras que não podem ser utilizadas, principalmente por não representarem o conteúdo que elas estão contento, grande parte do uso incorreto das tags de semântica se devem ao uso de tags apenas para estilização, que podem não representar o conteúdo que ela contém. A tag <code>&lt;div&gt;</code> não é uma tag semântica, logo ela não possuí nenhum significado quando escrita, porém ela é comumente utilizada para fazer estilizações no site, o que é o uso correto da tag, porém muitos sites acabam usando <b>apenas</b> esta tag para construir o site inteiro, o que é incorreto e não traz semântica e legibilidade ao código, tanto para desenvolvedores quanto para leitores de tela que não conseguem repassar corretamente o conteúdo aos usuários.</p>
                 <p>As tags semânticas não possuem uma regra exata para utilização como dito anteriormente, variando muito da interpretação do desenvolvedor de como utiliza-las corretamente, porém há algumas regras para utilização delas que devem ser levadas em consideração, um exemplo claro é a tag de navegação <code>&lt;nav&gt;</code> que deve ser utilizada para conter o menu de navegação principal do site, mesmo que uma tag div possa fazer as mesmas coisas que ela no sentido de estilização, ela não dirá aos desenvolvedores e a os leitores de tela que o que está dentro dela é o menu de navegação do site, o que não é exatamente ruim, mas pode causar alguns problemas no uso e na leitura do site.</p>
             </section>
             <section>
-                <h2>Otimização para mecanismos de busca (SEO)</h2>
+                <h3>Otimização para mecanismos de busca (SEO)</h3>
                 <p>Os mecanismos de busca são um dos motivos principais que uso correto da semântica no seu site é importante, através do <abbr title="Search Engine Optimization">SEO</abbr> conseguimos melhorar a classificação do site nesses buscadores e ganhar mais exibição. Claro que uma semântica correta não irá fazer milagres e trazer um conteúdo sem relevância para uma das primeiras páginas de busca, porém se combinarmos uma boa semântica com um conteúdo bem escrito e relevante conseguimos obter um resultado muito mais satisfatório e atrair mais usuários para seu site, gerando mais tráfego e consequentemente mais negócios.</p>
+            </section>
+            <section>
+                <h2>Tags mais usadas</h2>
+                <p>A estrutura do HTML tem muitas tags que transmitem algum significado semântico, desde paragrafos e títulos até tags de datas e artigos, porém há algumas tags que possuem um significado mais explícito e também são mais utilizadas no dia a dia. Abaixo você encontra uma lista com estas tags e alguns exemplos de seu uso.</p>
+
+                <dl>
+                    <dt><code>&lt;nav&gt;</code></dt>
+                    <dd>A tag <code>&lt;nav&gt;</code> define uma área de navegação do site. Ela agrupa links que levam a outras partes da mesma página, do site ou de sites externos. Embora frequentemente usada dentro do <code>&lt;header&gt;</code>, isso não é obrigatório. Seu uso melhora a acessibilidade e permite que leitores de tela reconheçam rapidamente o conjunto de links como parte da navegação.</dd>
+
+                    <dt><code>&lt;header&gt;</code></dt>
+                    <dd>A tag <code>&lt;header&gt;</code> representa o cabeçalho introdutório de uma página ou seção. Pode conter elementos como logotipo, título, subtítulo e navegação. Pode aparecer várias vezes no documento, uma vez para a página como um todo e outras dentro de seções ou <code>&lt;article&gt;</code></dd>
+
+                    <dt><code>&lt;article&gt;</code></dt>
+                    <dd>A tag <code>&lt;article&gt;</code> representa um conteúdo independente e autocontido que pode ser reutilizado fora da página sem perder o sentido. Exemplos comuns incluem postagens de blog, notícias, comentários e publicações em fóruns.</dd>
+
+                    <dt><code>&lt;section&gt;</code></dt>
+                    <dd>A tag <code>&lt;section&gt;</code> é usada para agrupar conteúdos relacionados dentro de uma página ou <code>&lt;article&gt;</code>. Ao contrário de <code>&lt;article&gt;</code>, seu conteúdo não precisa ser independente. Serve para organizar temas em blocos lógicos, como capítulos, sessões ou tópicos de um mesmo assunto.</dd>
+
+                    <dt><code>&lt;main&gt;</code></dt>
+                    <dd>A tag <code>&lt;main&gt;</code> define o conteúdo principal de uma página, excluindo elementos repetidos como menus, cabeçalhos e rodapés. Ela deve aparecer apenas uma vez por página e ajuda mecanismos de busca e leitores de tela a identificarem o foco do conteúdo.</dd>
+
+                    <dt><code>&lt;footer&gt;</code></dt>
+                    <dd>A tag code>&lt;footer&gt;</code> representa o rodapé de uma página ou de uma seção. Geralmente inclui informações complementares, como direitos autorais, autor do conteúdo, links institucionais, políticas de privacidade e contatos.</dd>
+
+                    <dt><code>&lt;aside&gt;</code></dt>
+                    <dd>A tag <code>&lt;aside&gt;</code> representa conteúdos complementares que não fazem parte direta do conteúdo principal. Pode conter listas de links relacionados, sugestões, propagandas ou glossários. Embora muitas vezes exibido na lateral, seu posicionamento visual depende do estilo do site.</dd>
+                </dl>
+
+                <p>Vale ressaltar que estas são apenas algumas das tags semânticas mais utilizadas e que contribuem para dar mais ênfase e significado ao conteúdo. No entanto, é fundamental que todo o site siga uma estrutura lógica e bem planejada, garantindo que essas tags sejam aplicadas corretamente desde o início do desenvolvimento.</p>
             </section>
         </article>
     </main>

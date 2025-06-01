@@ -4,54 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iframes</title>
-    <meta name="autor" content="André Coutinho">
-    <meta description="Quais as funções e utilizações de Iframes no HTML">
+    <meta name="author" content="André Coutinho">
+    <meta name="description" content="Quais as funções e utilizações de Iframes no HTML">
 </head>
 <body>
-    <br>
-    <nav>
-        <ul>
-            <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
-            <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
-            <li><a href='formatacao.html' title="Ir para a página que explica como formatar seu texto em HTML">Formatação e Citações</a></li>
-            <li><a href='links.html' title="Ir para a página que explica como utilizar links em HTML">Links</a></li>
-            <li><a href='imagens.html' title="Ir para a página que explica como utilizar imagens em HTML">Imagens</a></li>
-            <li><a href='Tabelas.html' title="Ir para a página que explica como utilizar tabelas em HTML">Tabelas</a></li>
-            <li><a href='Formularios.html' title="Ir para a página que explica como utilizar formulários em HTML">Formulários</a></li>
-            <li><a href='av.html' title="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
-            <li><a href='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
-            <li><a href='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
-            <li><a href="semantica.html" title="Ir para a página que explica como escrever HTML da forma correta">semântica</a></li>
-        </ul>
-    </nav>
-    <br>
-    <h1>O que são Iframes e como utiliza-los em HTML</h1>
-    <p>Iframes são uma maneira que o HTML nos disponibiliza para exibirmos páginas web dentro de outras páginas web, como se nosso site funcionasse como um navegador. Essa ferramenta nos disponibiliza muitas possibilidades, desde incorporação de vídeos externos até modos de personalização unicos de sua página web.</p>
-    <p>Apesar de ser uma tag bem surpreendente sua implementação é bem simples, utilizando apenas <code>src</code>, <code>width</code> e <code>height</code> já conseguimos implementá-los em nosso site, confira abaixo algumas aplicações possíveis para os Iframes.</p>
-    <h2>Incorporando páginas externas</h2>
-    <p>Como dito anteriormente, os Iframes permitem incorporar outros sites a nossa página, abaixo utilizamos a tag <code>&lt;iframe&gt;</code> fornecida pelo incorporar do youtube</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/nPEpaft1y1k?si=DBu6FPGx6Skkn2lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p>Apesar de ser possível incorporar vídeos escrevendo o código, o youtube ja disponibiliza essa possibilidade se utilizarmos clicarmos em "Compartilhar" e após "Incorporar", forncendo a tag completa para uso no site</p>
-    <p>Outro uso além de vídeos e para a incorporação de endereços do google maps, que o próprio assim como o youtube fornece a tag já pronta para uso</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.5047169917693!2d-46.636775824670096!3d-23.55030987880742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59abaaae4233%3A0xd9186faf714bc5b1!2sPra%C3%A7a%20da%20S%C3%A9%20-%20Se%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001001-000!5e0!3m2!1spt-BR!2sbr!4v1735646950973!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <h2>Incorporando páginas do próprio site</h2>
-    <p>Tendo em vista que podemos utilizar sites externos em nossa página, por que não poderiamos usar páginas internas? Basta trocar o <code>src</code> para apontar para uma página dentro do nosso site como foi feito logo abaixo</p>
-    <iframe src="index.html" width="50%" height="300px"></iframe>
-    <h2>Interação dos Iframes com a tag <code>&lt;a&gt;</code></h2>
-    <p>Visto que podemos abrir páginas web nos Iframes, isso abre possibilidade de usarmos a tag de âncora para abrir links de sites no nosso site, funcionando como um navegador, para isso, precisamos adicionarmos um <code>name</code> ao nosso Iframe e passarmos ele através do atributo <code>target</code> da tag de âncora para ela</p>
-    <ul>
-        <li><a href ='index.html' alt="Ir para a página inicial" target="iframe-incorporado">Página Inicial</a></li>
-        <li><a href ='cabecalho.html' alt="Ir para a página que explica o uso de Cabeçalhos" target="iframe-incorporado">Cabeçalho</a></li>
-        <li><a href='formatacao.html' alt="Ir para a página que explica como formatar seu texto em HTML" target="iframe-incorporado">Formatação e Citações</a></li>
-        <li><a href='links.html' alt="Ir para a página que explica como utilizar links em HTML" target="iframe-incorporado">Links</a></li>
-        <li><a href='imagens.html' alt="Ir para a página que explica como utilizar imagens em HTML" target="iframe-incorporado">Imagens</a></li>
-        <li><a href='Tabelas.html' alt="Ir para a página que explica como utilizar tabelas em HTML" target="iframe-incorporado">Tabelas</a></li>
-        <li><a href='Formularios.html' alt="Ir para a página que explica como utilizar formulários em HTML" target="iframe-incorporado">Formulários</a></li>
-        <li><a href='av.html' alt="Ir para a página que explica como utilizar audios e vídeos em HTML" target="iframe-incorporado">Audio e Vídeo</a></li>
-        <li><a href='iframe.html' alt="Ir para a página que explica como utiliza Iframes em HTML" target='iframe-incorporado'>Iframes</a></li>
-        <li><a href='listas.html' alt="Ir para a página que explica como utilizar listas em HTML" target="iframe-incorporado">Listas</a></li>
-        <li><a href="semantica.html" alt="Ir para a página que explica como escrever HTML da forma correta" target="iframe-incorporado">Semântica</a></li>
-    </ul>
-    <iframe name="iframe-incorporado" src="" width="50%" height="300px"></iframe>
+    <header>
+        <nav>
+            <ul>
+                <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
+                <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
+                <li><a href ='formatacao.html' title="Ir para a página que explica como formatar seu texto em HTML">Formatação e Citações</a></li>
+                <li><a href ='links.html' title="Ir para a página que explica como utilizar links em HTML">Links</a></li>
+                <li><a href ='imagens.html' title="Ir para a página que explica como utilizar imagens em HTML">Imagens</a></li>
+                <li><a href ='Tabelas.html' title="Ir para a página que explica como utilizar tabelas em HTML">Tabelas</a></li>
+                <li><a href ='Formularios.html' title="Ir para a página que explica como utilizar formulários em HTML">Formulários</a></li>
+                <li><a href ='av.html' title="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
+                <li><a href ='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
+                <li><a href ='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
+                <li><a href ='semantica.html' title="Ir para a página que explica como escrever HTML da forma correta">Semântica</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>O que são Iframes e como utiliza-los em HTML</h1>
+            <p>Iframes são uma maneira que o HTML nos disponibiliza para exibirmos páginas web dentro de outras páginas web, como se nosso site funcionasse como um navegador. Essa ferramenta nos disponibiliza muitas possibilidades, desde incorporação de vídeos externos até modos de personalização unicos de sua página web.</p>
+            <p>Apesar de ser uma tag bem surpreendente sua implementação é bem simples, utilizando apenas <code>src</code>, <code>width</code> e <code>height</code> já conseguimos implementá-los em nosso site, confira abaixo algumas aplicações possíveis para os Iframes.</p>
+            <section>
+                <h2>Incorporando páginas externas</h2>
+                <p>Como dito anteriormente, os Iframes permitem incorporar outros sites a nossa página, abaixo utilizamos a tag <code>&lt;iframe&gt;</code> fornecida pelo incorporar do youtube</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nPEpaft1y1k?si=DBu6FPGx6Skkn2lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Apesar de ser possível incorporar vídeos escrevendo o código, o youtube ja disponibiliza essa possibilidade se utilizarmos clicarmos em "Compartilhar" e após "Incorporar", forncendo a tag completa para uso no site</p>
+                <p>Outro uso além de vídeos e para a incorporação de endereços do google maps, que o próprio assim como o youtube fornece a tag já pronta para uso</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.5047169917693!2d-46.636775824670096!3d-23.55030987880742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59abaaae4233%3A0xd9186faf714bc5b1!2sPra%C3%A7a%20da%20S%C3%A9%20-%20Se%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001001-000!5e0!3m2!1spt-BR!2sbr!4v1735646950973!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <section>
+                <h2>Incorporando páginas do próprio site</h2>
+                <p>Tendo em vista que podemos utilizar sites externos em nossa página, por que não poderiamos usar páginas internas? Basta trocar o <code>src</code> para apontar para uma página dentro do nosso site como foi feito logo abaixo</p>
+                <iframe src="index.html" width="50%" height="300px"></iframe>
+                <h2>Interação dos Iframes com a tag <code>&lt;a&gt;</code></h2>
+                <p>Visto que podemos abrir páginas web nos Iframes, isso abre possibilidade de usarmos a tag de âncora para abrir links de sites no nosso site, funcionando como um navegador, para isso, precisamos adicionarmos um <code>name</code> ao nosso Iframe e passarmos ele através do atributo <code>target</code> da tag de âncora para ela</p>
+                <ul>
+                    <li><a href ='index.html' alt="Ir para a página inicial" target="iframe-incorporado">Página Inicial</a></li>
+                    <li><a href ='cabecalho.html' alt="Ir para a página que explica o uso de Cabeçalhos" target="iframe-incorporado">Cabeçalho</a></li>
+                    <li><a href='formatacao.html' alt="Ir para a página que explica como formatar seu texto em HTML" target="iframe-incorporado">Formatação e Citações</a></li>
+                    <li><a href='links.html' alt="Ir para a página que explica como utilizar links em HTML" target="iframe-incorporado">Links</a></li>
+                    <li><a href='imagens.html' alt="Ir para a página que explica como utilizar imagens em HTML" target="iframe-incorporado">Imagens</a></li>
+                    <li><a href='Tabelas.html' alt="Ir para a página que explica como utilizar tabelas em HTML" target="iframe-incorporado">Tabelas</a></li>
+                    <li><a href='Formularios.html' alt="Ir para a página que explica como utilizar formulários em HTML" target="iframe-incorporado">Formulários</a></li>
+                    <li><a href='av.html' alt="Ir para a página que explica como utilizar audios e vídeos em HTML" target="iframe-incorporado">Audio e Vídeo</a></li>
+                    <li><a href='iframe.html' alt="Ir para a página que explica como utiliza Iframes em HTML" target='iframe-incorporado'>Iframes</a></li>
+                    <li><a href='listas.html' alt="Ir para a página que explica como utilizar listas em HTML" target="iframe-incorporado">Listas</a></li>
+                    <li><a href="semantica.html" alt="Ir para a página que explica como escrever HTML da forma correta" target="iframe-incorporado">Semântica</a></li>
+                </ul>
+                <iframe name="iframe-incorporado" src="" width="50%" height="300px"></iframe>
+            </section>
+        </article>
+    </main>
 </body>
 </html>

@@ -4,146 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários</title>
-    <meta name="autor" content="André Coutinho">
+    <meta name="author" content="André Coutinho">
     <meta name="description" content="Como trabalhar com formulários em HTML">
 </head>
 <body>
-    <br>
-    <nav>
-        <ul>
-            <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
-            <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
-            <li><a href='formatacao.html' title="Ir para a página que explica como formatar seu texto em HTML">Formatação e Citações</a></li>
-            <li><a href='links.html' title="Ir para a página que explica como utilizar links em HTML">Links</a></li>
-            <li><a href='imagens.html' title="Ir para a página que explica como utilizar imagens em HTML">Imagens</a></li>
-            <li><a href='Tabelas.html' title="Ir para a página que explica como utilizar tabelas em HTML">Tabelas</a></li>
-            <li><a href='Formularios.html' title="Ir para a página que explica como utilizar formulários em HTML">Formulários</a></li>
-            <li><a href='av.html' title="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
-            <li><a href='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
-            <li><a href='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
-            <li><a href="semantica.html" title="Ir para a página que explica como escrever HTML da forma correta">semântica</a></li>
-        </ul>
-    </nav>
-    <h1>Formulários em HTML</h1>
-<p>Formulários são extremamente versáteis e utilizados para coleta de informações. Eles podem ser usados para contato, aceitação de termos, orçamentos, entre outros. O HTML nos fornece uma maneira de implementá-los em nosso site com algumas tags específicas. Confira abaixo uma relação das tags utilizadas para criação de formulários:</p>
-
-<h2>Tags para criação de formulários</h2>
-<dl>
-    <dt><code>&lt;form&gt;</code></dt>
-    <dd>Esta é a tag que define o formulário. Ela envolve todas as outras tags que criam campos ou configuram o formulário.</dd>
-
-    <dt><code>&lt;input&gt;</code></dt>
-    <dd>Esta é a principal tag para criação de campos de entrada. Ela é responsável por criar os campos onde iremos inserir informações ou aceitar termos. O atributo <code>type</code> define o tipo de campo. Confira abaixo uma lista com os principais tipos e suas aplicações:</dd>
-    <ul>
-        <li>Tipo <code>text</code>: Cria uma caixa de texto.</li>
-        <li>Tipo <code>password</code>: Cria uma caixa de texto, mas o texto digitado fica "escondido", como em um campo de senha.</li>
-        <li>Tipo <code>email</code>: Cria uma caixa de texto que aceita apenas endereços de e-mail. Possui uma validação que impede valores inválidos.</li>
-        <li>Tipo <code>submit</code>: Cria um botão para envio do formulário.</li>
-        <li>Tipo <code>radio</code>: Cria botões de seleção única, como em perguntas de múltipla escolha.</li>
-        <li>Tipo <code>checkbox</code>: Cria caixas de seleção independentes, permitindo selecionar mais de uma opção.</li>
-        <li>Tipo <code>number</code>: Cria um campo de texto que aceita apenas números.</li>
-    </ul>
-
-    <dt><code>&lt;label&gt;</code></dt>
-    <dd>Cria um título ou descrição para um campo. Por exemplo, ao criar um campo para o nome do usuário, esta tag exibe um texto como "Nome:" antes do campo. O atributo <code>for</code> pode ser usado para vincular o rótulo a um campo específico, utilizando o <code>id</code> do campo.</dd>
-
-    <dt><code>&lt;select&gt;</code></dt>
-    <dd>Cria uma caixa de seleção de opções. Contém outras tags que definem as opções disponíveis.</dd>
-
-    <dt><code>&lt;option&gt;</code></dt>
-    <dd>Define as opções dentro de uma tag <code>&lt;select&gt;</code>. O atributo <code>value</code> define o valor da opção enviada no formulário. O texto visível ao usuário é definido dentro da própria tag. O atributo <code>selected</code> indica a opção selecionada por padrão, e o atributo <code>disabled</code> impede que a opção seja selecionada.</dd>
-
-    <dt><code>&lt;textarea&gt;</code></dt>
-    <dd>Cria uma área de texto para inserção de textos maiores, como descrições ou opiniões. Os atributos <code>rows</code> e <code>cols</code> definem, respectivamente, o número de linhas e colunas da área de texto.</dd>
-</dl>
-
-<h3>Informações complementares</h3>
-<p>Embora a maioria das tags acima tenha sido bem explicada, o tipo <code>radio</code> precisa de algumas informações adicionais para funcionar corretamente. Além disso, alguns atributos importantes se aplicam a várias tags e devem ser mencionados. Confira abaixo:</p>
-
-<h4>Tipo <code>radio</code></h4>
-<p>Como mencionado, o tipo <code>radio</code> cria botões de seleção única. Para que funcionem corretamente, o atributo <code>name</code> é necessário. Ele conecta as opções de um mesmo grupo, permitindo que apenas uma seja selecionada. Por exemplo, em uma questão de prova, todas as alternativas da mesma questão devem ter o mesmo <code>name</code>:</p>
-<pre><code>&lt;input type="radio" name="questao_10" value="A"&gt; A<br>
-&lt;input type="radio" name="questao_10" value="B"&gt; B<br>
-&lt;input type="radio" name="questao_10" value="C"&gt; C<br>
-&lt;input type="radio" name="questao_10" value="D"&gt; D</code></pre>
-<p>Dessa forma, o usuário pode escolher apenas uma alternativa da questão 10.</p>
-
-<h4>Atributos universais</h4>
-<p>Alguns atributos são indispensáveis para o funcionamento de formulários:</p>
-<ul>
-    <li><code>value</code>: Define o valor que o campo envia ao formulário. É necessário em campos como <code>radio</code> e <code>option</code>. Também pode ser usado para definir um valor predefinido em campos como <code>text</code>, <code>number</code> e <code>password</code>.</li>
-    <li><code>id</code>: Atribui um identificador único a uma tag. Este atributo permite redirecionar o usuário a um campo específico ao usar a tag <code>&lt;label&gt;</code>. O <code>id</code> não é exclusivo de formulários e pode ser usado em outros elementos HTML. Vale lembrar que cada <code>id</code> deve ser único na página.</li>
-    <li><code>required</code>: Este atributo faz com que um determinado campo de um formulário seja de prenchimento obrigatório, não sendo possível enviar o fomulário sem ele</li>
-    <li><code>placeholder</code>: Apesar de não ser uma atributo que agregue funcionalidades, ele deixa o formulário mais intuitivo adicionando uma legenda aos campos de texto, como se fosse um campo preenchido, mas o usuário não consegue interagir com aquele texto.</li>
-</ul>
-<h2>Implementando um formulário</h2>
-<p>Abaixo há um formulário contendo a aplicação prática dos conceitos abordados acima:</p>
-<form>
-    <label for="nome">Nome: </label>
-    <br>
-    <input type="text" id="nome" placeholder="Digite seu nome" required>
-    <br>
-    <label for="idade">Idade: </label>
-    <br>
-    <input type="number" id="idade" placeholder="Digite sua idade" required>
-    <br>
-    <label for="email">E-mail: </label>
-    <br>
-    <input type="email" id="email" placeholder="Digite seu e-mail" required>
-    <br>
-    <label for="senha">Senha: </label>
-    <br>
-    <input type="password" id="senha" placeholder="Crie uma senha" required>
-    <br><br>
-    <label>Exemplo Rádio 1</label>
-    <br>
-    <label for="A1">A</label>
-    <input type="radio" name="quest_1" id="A1">
-    <label for="B1">B</label>
-    <input type="radio" name="quest_1" id="B1">
-    <label for="C1">C</label>
-    <input type="radio" name="quest_1" id="C1">
-    <label for="D1">D</label>
-    <input type="radio" name="quest_1" id="D1">
-    <br><br>
-    <label>Exemplo Rádio 2</label>
-    <br>
-    <label for="A2">A</label>
-    <input type="radio" name="quest_2" id="A2">
-    <label for="B2">B</label>
-    <input type="radio" name="quest_2" id="B2">
-    <label for="C2">C</label>
-    <input type="radio" name="quest_2" id="C2">
-    <label for="D2">D</label>
-    <input type="radio" name="quest_2" id="D2">
-    <br><br>
-    <label>Selecione uma cor</label>
-    <br>
-    <select required>
-        <option selected disabled>Selecione uma Cor</option>
-        <option>Vermelho</option>
-        <option>Azul</option>
-        <option>Amarelo</option>
-        <option>Verde</option>
-        <option>Preto</option>
-        <option>Branco</option>
-    </select>
-    <br><br>
-    <input type="checkbox" id="aceite_1" required>
-    <label for="aceite_1">Exemplo checkbox 1</label>
-    <br>    
-    <input type="checkbox" id="aceite_2" required>
-    <label for="aceite_2">Exemplo checkbox 2<label>
-    <br>    
-    <input type="checkbox" id="aceite_3">
-    <label for="aceite_3">Exemplo checkbox 3</label>
-    <br><br>
-    <label>Deixe um comentário!</label>
-    <br>
-    <textarea rows="15" cols="150" placeholder="Digite aqui seu comentário!"></textarea>
-    <br>
-    <button type="submit">Enviar</button>
-    <button type="reset">Resetar formulário</button>
-</form>
+    <header>
+        <nav>
+            <ul>
+                <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
+                <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
+                <li><a href ='formatacao.html' title="Ir para a página que explica como formatar seu texto em HTML">Formatação e Citações</a></li>
+                <li><a href ='links.html' title="Ir para a página que explica como utilizar links em HTML">Links</a></li>
+                <li><a href ='imagens.html' title="Ir para a página que explica como utilizar imagens em HTML">Imagens</a></li>
+                <li><a href ='Tabelas.html' title="Ir para a página que explica como utilizar tabelas em HTML">Tabelas</a></li>
+                <li><a href ='Formularios.html' title="Ir para a página que explica como utilizar formulários em HTML">Formulários</a></li>
+                <li><a href ='av.html' title="Ir para a página que explica como utilizar audios e vídeos em HTML">Audio e Vídeo</a></li>
+                <li><a href ='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
+                <li><a href ='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
+                <li><a href ='semantica.html' title="Ir para a página que explica como escrever HTML da forma correta">Semântica</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Formulários em HTML</h1>
+        <p>Formulários são extremamente versáteis e utilizados para coleta de informações. Eles podem ser usados para contato, aceitação de termos, orçamentos, entre outros. O HTML nos fornece uma maneira de implementá-los em nosso site com algumas tags específicas. Confira abaixo uma relação das tags utilizadas para criação de formulários:</p>
+    
+        <section>
+            <h2>Tags para criação de formulários</h2>
+            <dl>
+                <dt><code>&lt;form&gt;</code></dt>
+                <dd>Esta é a tag que define o formulário. Ela envolve todas as outras tags que criam campos ou configuram o formulário.</dd>
+        
+                <dt><code>&lt;input&gt;</code></dt>
+                <dd>Esta é a principal tag para criação de campos de entrada. Ela é responsável por criar os campos onde iremos inserir informações ou aceitar termos. O atributo <code>type</code> define o tipo de campo. Confira abaixo uma lista com os principais tipos e suas aplicações:</dd>
+                <ul>
+                    <li>Tipo <code>text</code>: Cria uma caixa de texto.</li>
+                    <li>Tipo <code>password</code>: Cria uma caixa de texto, mas o texto digitado fica "escondido", como em um campo de senha.</li>
+                    <li>Tipo <code>email</code>: Cria uma caixa de texto que aceita apenas endereços de e-mail. Possui uma validação que impede valores inválidos.</li>
+                    <li>Tipo <code>submit</code>: Cria um botão para envio do formulário.</li>
+                    <li>Tipo <code>radio</code>: Cria botões de seleção única, como em perguntas de múltipla escolha.</li>
+                    <li>Tipo <code>checkbox</code>: Cria caixas de seleção independentes, permitindo selecionar mais de uma opção.</li>
+                    <li>Tipo <code>number</code>: Cria um campo de texto que aceita apenas números.</li>
+                </ul>
+        
+                <dt><code>&lt;label&gt;</code></dt>
+                <dd>Cria um título ou descrição para um campo. Por exemplo, ao criar um campo para o nome do usuário, esta tag exibe um texto como "Nome:" antes do campo. O atributo <code>for</code> pode ser usado para vincular o rótulo a um campo específico, utilizando o <code>id</code> do campo.</dd>
+        
+                <dt><code>&lt;select&gt;</code></dt>
+                <dd>Cria uma caixa de seleção de opções. Contém outras tags que definem as opções disponíveis.</dd>
+        
+                <dt><code>&lt;option&gt;</code></dt>
+                <dd>Define as opções dentro de uma tag <code>&lt;select&gt;</code>. O atributo <code>value</code> define o valor da opção enviada no formulário. O texto visível ao usuário é definido dentro da própria tag. O atributo <code>selected</code> indica a opção selecionada por padrão, e o atributo <code>disabled</code> impede que a opção seja selecionada.</dd>
+        
+                <dt><code>&lt;textarea&gt;</code></dt>
+                <dd>Cria uma área de texto para inserção de textos maiores, como descrições ou opiniões. Os atributos <code>rows</code> e <code>cols</code> definem, respectivamente, o número de linhas e colunas da área de texto.</dd>
+            </dl>
+        
+            <h3>Informações complementares</h3>
+            <p>Embora a maioria das tags acima tenha sido bem explicada, o tipo <code>radio</code> precisa de algumas informações adicionais para funcionar corretamente. Além disso, alguns atributos importantes se aplicam a várias tags e devem ser mencionados.</p>
+        
+            <h4>Tipo <code>radio</code></h4>
+            <p>Como mencionado, o tipo <code>radio</code> cria botões de seleção única. Para que funcionem corretamente, o atributo <code>name</code> é necessário. Ele conecta as opções de um mesmo grupo, permitindo que apenas uma seja selecionada. Por exemplo, em uma questão de prova, todas as alternativas da mesma questão devem ter o mesmo <code>name</code>:</p>
+            <pre><code>&lt;input type="radio" name="questao_10" value="A"&gt; A<br>
+            &lt;input type="radio" name="questao_10" value="B"&gt; B<br>
+            &lt;input type="radio" name="questao_10" value="C"&gt; C<br>
+            &lt;input type="radio" name="questao_10" value="D"&gt; D</code></pre>
+            <p>Dessa forma, o usuário pode escolher apenas uma alternativa da questão 10.</p>
+        
+            <h4>Atributos universais</h4>
+            <p>Alguns atributos são indispensáveis para o funcionamento de formulários:</p>
+            <ul>
+                <li><code>value</code>: Define o valor que o campo envia ao formulário. É necessário em campos como <code>radio</code> e <code>option</code>. Também pode ser usado para definir um valor predefinido em campos como <code>text</code>, <code>number</code> e <code>password</code>.</li>
+                <li><code>id</code>: Atribui um identificador único a uma tag. Este atributo permite redirecionar o usuário a um campo específico ao usar a tag <code>&lt;label&gt;</code>. O <code>id</code> não é exclusivo de formulários e pode ser usado em outros elementos HTML. Vale lembrar que cada <code>id</code> deve ser único na página.</li>
+                <li><code>required</code>: Este atributo faz com que um determinado campo de um formulário seja de prenchimento obrigatório, não sendo possível enviar o fomulário sem ele</li>
+                <li><code>placeholder</code>: Apesar de não ser uma atributo que agregue funcionalidades, ele deixa o formulário mais intuitivo adicionando uma legenda aos campos de texto, como se fosse um campo preenchido, mas o usuário não consegue interagir com aquele texto.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Implementando um formulário</h2>
+            <p>Abaixo há um formulário contendo a aplicação prática dos conceitos abordados acima:</p>
+            <form>
+                <label for="nome">Nome: </label>
+                <br>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+                <br>
+                <label for="idade">Idade: </label>
+                <br>
+                <input type="number" id="idade" placeholder="Digite sua idade" required>
+                <br>
+                <label for="email">E-mail: </label>
+                <br>
+                <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                <br>
+                <label for="senha">Senha: </label>
+                <br>
+                <input type="password" id="senha" placeholder="Crie uma senha" required>
+                <br><br>
+                <label>Exemplo Rádio 1</label>
+                <br>
+                <label for="A1">A</label>
+                <input type="radio" name="quest_1" id="A1">
+                <label for="B1">B</label>
+                <input type="radio" name="quest_1" id="B1">
+                <label for="C1">C</label>
+                <input type="radio" name="quest_1" id="C1">
+                <label for="D1">D</label>
+                <input type="radio" name="quest_1" id="D1">
+                <br><br>
+                <label>Exemplo Rádio 2</label>
+                <br>
+                <label for="A2">A</label>
+                <input type="radio" name="quest_2" id="A2">
+                <label for="B2">B</label>
+                <input type="radio" name="quest_2" id="B2">
+                <label for="C2">C</label>
+                <input type="radio" name="quest_2" id="C2">
+                <label for="D2">D</label>
+                <input type="radio" name="quest_2" id="D2">
+                <br><br>
+                <label>Selecione uma cor</label>
+                <br>
+                <select required>
+                    <option selected disabled>Selecione uma Cor</option>
+                    <option>Vermelho</option>
+                    <option>Azul</option>
+                    <option>Amarelo</option>
+                    <option>Verde</option>
+                    <option>Preto</option>
+                    <option>Branco</option>
+                </select>
+                <br><br>
+                <input type="checkbox" id="aceite_1" required>
+                <label for="aceite_1">Exemplo checkbox 1</label>
+                <br>    
+                <input type="checkbox" id="aceite_2" required>
+                <label for="aceite_2">Exemplo checkbox 2</label>
+                <br>    
+                <input type="checkbox" id="aceite_3">
+                <label for="aceite_3">Exemplo checkbox 3</label>
+                <br><br>
+                <label>Deixe um comentário!</label>
+                <br>
+                <textarea rows="15" cols="150" placeholder="Digite aqui seu comentário!"></textarea>
+                <br>
+                <button type="submit">Enviar</button>
+                <button type="reset">Resetar formulário</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
