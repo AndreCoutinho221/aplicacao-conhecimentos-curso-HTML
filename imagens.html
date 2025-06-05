@@ -6,10 +6,11 @@
     <title>Imagens</title>
     <meta name="author" content="André Coutinho">
     <meta name="description" content="Como implementar imagens no seu site e formata-las corretamente">
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body class="bg">
     <header>
-        <nav>
+        <nav class="nav-bar">
             <ul>
                 <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
                 <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
@@ -25,7 +26,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="main-content">
         <!--Antes dos estilos CSS-->
         <h1>Trabalhando com imagens em HTML</h1>
         <figure>
@@ -40,7 +41,7 @@
                 <p>
                     Como dito anteriormente, esta tag possui alguns atributos que podem ser utilizados, os mais simples são:
                 </p>
-                <ul>
+                <ul class="list-imagens">
                     <li>Atributo <code>width</code>: Define a largura da imagem através de um valor em pixels ou em porcentagem.</li>
                     <li>Atributo <code>height</code>: Define a altura de uma imagem através de um valor em pixel ou em porcentagem.</li>
                     <li>Atributo <code>src</code>: Este atributo define qual imagem será mostrada, ele pode receber arquivos de dentro do projeto ou links de imagens externas, funcionando de maneira semelhante a tags de link.</li>
@@ -93,10 +94,9 @@
                 <p>
                     Quando tratamos de imagens, há varios tipos de arquivos que são utilizados, desde arquivos .raw que são extremamente pesados até arquivos .webp que são extremamente leves e já otimzados para o uso na internet, saber quando usar um certo tipo de imagem em seu site pode trazer possibilidades incríveis de estilização, design e claro, velocidade. Abaixo há uma lista com os principais tipos de imagens usadas na web e suas características:
                 </p>
-                <dl>
+                <dl class="dl-list-imagens">
                     <dt>JPG ou JPEG:</dt>
                     <dd>É atualmente o tipo de arquivo mais utilizado para imagens num geral, celulares comumente tiram fotos neste arquivo. Apesar de ser grandemente utilizada, ela faz a compactação de imagens com algumas perdas de qualidade se utilizada de maneira muito extrema, além disso, não suporta a transparência em imagens por não ter canal de cores Alfa.
-                    <br>
                     <img src="source/img/medium-shot-man-wearing-vr-glasses.jpg" width="300px">
                     </dd>
         
@@ -106,34 +106,27 @@
                     
                     <dt>GIF:</dt>
                     <dd>Formato de imagens animadas, por ter um peso leve para uma animação, possui muito pouca qualidade de imagem e suporte de cores, sendo pouco utilizado atualmente.
-                    <br>
                     <img src="https://media.tenor.com/5o2p0tH5LFQAAAAi/hug.gif" width="300px"></dd>
                     
                     <dt>SVG:</dt>
                     <dd>Formato de imagens para "vetores", imagens que não são necesariamente fotos e são construidas com formas geométricas, possui um tamanho leve e é muito utilizado para logotipos e gráficos vetoriais. Por ser leve e baseada em vetores, não é adequada para fotografias ou imagens detalhadas.
-                    <br>
                     <img src="source/img/alien-svgrepo-com.svg" width="300px"></dd>
                     
                     <dt>WEBP:</dt>
                     <dd>Formato de imagem semelhante ao JPG e PNG, porém com uma capacidade de compactação sem perdas maior que o JPG e com suporte a transparência. Por ser um formato "novo", alguns navegadores mais antigos não possuem suporte a ele.
-                    <br>
                     <img src="source/img/exemplo-imagem-webp.webp" width="300px"></dd>
                     
                     <dt>AVIF:</dt>
                     <dd>Um formato de imagem mais moderno que o WEBP, possuindo uma capacidade de compactação maior e mais eficiente, trazendo grande qualidade de imagem com arquivos muito pequenos. Por ser uma tecnologia mais recente que o WEBP, possui muito mais navegadores e dispositivos que não são compatíveis com este tipo de arquivo.
-                    <br>
                     <img src="source/img/hato.profile0.8bpc.yuv420.no-cdef.avif" width="300px"></dd>
                     
                     <dt>ICO:</dt>
                     <dd>Formato de arquivo específico para icones de sites e favicons. Por possuir poucas aplicações se torna um tipo de imagem utilizada apenas em casos muito específicos.
-                    <br>
                     <img src="source/img/images_canon_camera_1746.ico" width="300px"></dd>
                     
                     <dt>RAW:</dt>
                     <dd>Formato de arquivos utilizado apenas em ambito profissional de fotografia, ele não possui limite de cores como a profundidade de bits e outros valores, sendo ideal para a edição de fotos onde se pode trabalhar com diversos tons de cores e iluminação, esse tipo de imagem não é utilizado na web e por dispositivos comuns devido a seu alto peso "sem" necessidade, onde o usuário comum se contentaria com uma imagem JPG.
-                    <br>
                     <img src="source/img/exemplo-imagem-raw.NEF" width="300px">
-                    <br>
                     <small>Devido a problemas de compatibilidade, esta imagem provavelmente não será exibida</small>
                     </dd>
                     
@@ -144,7 +137,7 @@
             <p>Tendo em vista que imagens podem ser vinculadas como botões através da tag de âncora, também podemos fazer alguns truques com isto, transformando certas partes de imagens em links, isso pode ser feito através de sites como o <a href="https://www.image-map.net">Image-Map.net</a> ou manualmente através da tag <code>&lt;map name&gt;</code>. Abaixo há uma aplicação dessa tag e uma explicação de como aplica-la:</p>
         
             <!-- Image Map Generated by http://www.image-map.net/ -->
-            <img src="source/img/image-map-exemplo.webp" usemap="#image-map">
+            <img src="source/img/image-map-exemplo.webp" usemap="#image-map" class="image-map-test">
         
             <map name="image-map">
                 <area target="_blank" alt="calculadora" title="calculadora" href="https://www.calculadoraonline.com.br/basica" coords="336,422,474,331,571,383,422,494,331,448" shape="poly">

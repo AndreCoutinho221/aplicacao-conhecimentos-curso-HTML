@@ -6,10 +6,11 @@
     <title>Links</title>
     <meta name="author" content="André Coutinho">
     <meta name="description" content="O que são links e como incorporá-los no seu site">
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body class="bg">
     <header>
-        <nav>
+        <nav class="nav-bar">
             <ul>
                 <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
                 <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
@@ -22,17 +23,18 @@
                 <li><a href ='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
                 <li><a href ='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
                 <li><a href ='semantica.html' title="Ir para a página que explica como escrever HTML da forma correta">Semântica</a></li>
+                <li><a href ='estilizacao.html' title="Ir para a página que começa a explicar os estilos CSS">Estilização</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="main-content">
         <!--Antes dos estilos CSS-->
         <h1>O que são links e como utilizá-los</h1>
         <p>Links nada mais são do que caminhos que existem na internet, ou melhor, endereços, cada endereço é responsável por uma página na internet e através destes endereços conseguimos navegar adequadamente na internet. Os links podem ser divididos em dois tipos, links relativos e links absolutos.</p>
         <h2>Links absolutos</h2>
         <p>Links absolutos são links que apontam para um endereço web específico, um endereço absoluto, são utilizados quando queremos anexar links de algum outro site ao nosso ou redirecionar o usuário a outro site. Um exemplo: <a href="https://www.youtube.com.br">Link para o Youtube</a>, <a href="https://www.google.com.br">Link para o google</a></p>
         <h2>Links relativos</h2>
-        <p>Links relativos são links que apontam para páginas dentro do seu site, ao invés de termos um link propriamente(como www.google.com.br) temos um caminho para um arquivo dentro do seu projeto que o levará a uma outra página, estes links estão presentes em todo site através de menus, botões e outras implementações. Um exemplo claro de implementação destes tipos de links é o menu deste site, que foi feito usando apenas links relativos.</p>
+        <p>Links relativos são links que apontam para páginas dentro do seu site, ao invés de termos um link propriamente (como www.google.com.br) temos um caminho para um arquivo dentro do seu projeto que o levará a uma outra página, estes links estão presentes em todo site através de menus, botões e outras implementações. Um exemplo claro de implementação destes tipos de links é o menu deste site, que foi feito usando apenas links relativos.</p>
         <h2>Como implementa-los no seu site</h2>
         <p>Links são implementados através de uma tag de âncora(<code>&lt;a&gt;</code>), nesta tag possuímos o atributo "href" que é onde colocamos o link que irá marcar no texto.</p>
         <p>Exemplo de link absoluto: <code>&lt;a href="https://www.google.com.br"&gt;Texto marcado como link&lt;/a&gt;</code></p>

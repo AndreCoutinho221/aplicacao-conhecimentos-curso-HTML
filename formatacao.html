@@ -6,10 +6,11 @@
     <title>Formatação e Citação</title>
     <meta name="author" content="André Coutinho">
     <meta name="description" content="Tags de formatação de texto e como utilizalas para melhorar seu site">
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body class="bg">
     <header>
-        <nav>
+        <nav class="nav-bar">
             <ul>
                 <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
                 <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
@@ -22,10 +23,11 @@
                 <li><a href ='iframe.html' title="Ir para a página que explica como utiliza Iframes em HTML">Iframes</a></li>
                 <li><a href ='listas.html' title="Ir para a página que explica como utilizar listas em HTML">Listas</a></li>
                 <li><a href ='semantica.html' title="Ir para a página que explica como escrever HTML da forma correta">Semântica</a></li>
+                <li><a href ='estilizacao.html' title="Ir para a página que começa a explicar os estilos CSS">Estilização</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="main-content">
         <!--Antes dos estilos CSS-->
         <article>
             <h1>Estilização do texto através de Tags</h1>
@@ -35,45 +37,45 @@
                 <p>Tags de formatação de texto formatam seu texto sem utilizar nenhum estilo em CSS, apesar de ser mais demoradas que utilizar um estilo inteiro em CSS elas conseguem ser muito bem utilizadas de maneira pontual no seu texto, a seguir há uma lista contendo as tags mais comuns para formatação de texto.</p>
                 <dl>
                     <dt><code>&lt;b&gt;</code>:</dt>
-                    <dd>Tag responsável por marcar em negrito o texto. <br> Exemplo: <b>Texto em negrito</b></dd>
+                    <dd>Tag responsável por marcar em negrito o texto. Exemplo: <b>Texto em negrito</b></dd>
                     
                     <dt><code>&lt;strong&gt;</code>:</dt>
-                    <dd>Tag responsável por marcar o texto de forma que ele tenha mais ênfase, num geral, será semelhante ao negrito em aparência, porém semânticamente o texto recebe um destaque maior. <br> Exemplo: <strong>Texto com tag strong</strong></dd>
+                    <dd>Tag responsável por marcar o texto de forma que ele tenha mais ênfase, num geral, será semelhante ao negrito em aparência, porém semânticamente o texto recebe um destaque maior. Exemplo: <strong>Texto com tag strong</strong></dd>
             
                     <dt><code>&lt;i&gt;</code>:</dt>
-                    <dd>Tag responsável por deixar o texto em itálico.<br> Exemplo: <i>Texto em itálico</i></dd>
+                    <dd>Tag responsável por deixar o texto em itálico. Exemplo: <i>Texto em itálico</i></dd>
             
                     <dt><code>&lt;u&gt;</code>:</dt>
-                    <dd>Tag respondável por deixar o texto sublinhado.<br> Exemplo: <u>Texto sublinhado</u></dd>
+                    <dd>Tag respondável por deixar o texto sublinhado. Exemplo: <u>Texto sublinhado</u></dd>
             
                     <dt><code>&lt;small&gt;</code>:</dt>
-                    <dd>Tag que formata o texto de uma maneira que ele fique levemente menor.<br> Exemplo: <small>Texto um pouco menor</small></dd>
+                    <dd>Tag que formata o texto de uma maneira que ele fique levemente menor. Exemplo: <small>Texto um pouco menor</small></dd>
             
                     <dt><code>&lt;del&gt;</code>:</dt>
-                    <dd>Tag responsável por riscar o texto.<br> Exemplo: <del>Texto riscado</del></dd>
+                    <dd>Tag responsável por riscar o texto. Exemplo: <del>Texto riscado</del></dd>
             
                     <dt><code>&lt;sup&gt;</code>:</dt>
-                    <dd>Tag responsável pela escrita de expoentes.<br> Exemplo: 10<sup>2</sup>, 15<sup>8</sup>, 2<sup>10</sup></dd>
+                    <dd>Tag responsável pela escrita de expoentes. Exemplo: 10<sup>2</sup>, 15<sup>8</sup>, 2<sup>10</sup></dd>
             
                     <dt><code>&lt;sub&gt;</code>:</dt>
-                    <dd>Tag para texto escrito na parte inferior.<br> Exemplo: H<sub>2</sub>O, CO<sub>2</sub></dd>
+                    <dd>Tag para texto escrito na parte inferior. Exemplo: H<sub>2</sub>O, CO<sub>2</sub></dd>
             
                     <dt><code>&lt;mark&gt;</code>:</dt>
-                    <dd>Tag responsável por marcar o texto como se fosse um marca-texto.<br> Exemplo: <mark>Texto marcado</mark></dd>
+                    <dd>Tag responsável por marcar o texto como se fosse um marca-texto. Exemplo: <mark>Texto marcado</mark></dd>
             
                     <dt><code>&lt;bdo&gt;</code>:</dt>
                     <dd>Tag responsável por escrever o texto em outra direção usando o atributo "dir" com os valores <b>rtl</b> (Direita para a esquerda) ou <b>ltr</b> (Esquerda para a direita).<br> Exemplos:<br> <bdo dir="rtl">Texto da direita para a esquerda</bdo><br> <bdo dir="ltr">Texto da esquerda para a direita</bdo></dd>
             
                     <dt><code>&lt;br&gt;</code>:</dt>
-                    <dd>Tag responsável por fazer quebras de linha, apesar de não ser muito utilizada, ainda é muito útil para alguns projetos mais simples.</dd>
+                    <dd>Tag responsável por fazer quebras de linha, apesar de não ser muito usada, ainda é muito útil para alguns projetos mais simples.</dd>
                 </dl>
-            </section>
+            </section> 
             <section>
                 <h2>Tags de Citação</h2>
                 <p>Tags de citação também formatam o texto, porém são apropriadas para serem usadas apenas em citações, abaixo á uma lista com as tags de citação e seus usos.</p>
                 <dl>
                     <dt><code>&lt;cite&gt;</code>:</dt>
-                    <dd>Esta tag é responsável por marcar uma obra citada, seja um filme, livro, música, etc. <br> Exemplo: <cite>Titanic</cite>, <cite>Harry Potter</cite>, <cite>Imagine Dragons - Enemy</cite></dd>
+                    <dd>Esta tag é responsável por marcar uma obra citada, seja um filme, livro, música, etc. Exemplo: <cite>Titanic</cite>, <cite>Harry Potter</cite>, <cite>Imagine Dragons - Enemy</cite></dd>
                 
                     <dt><code>&lt;q&gt;</code>:</dt>
                     <dd>
@@ -106,11 +108,11 @@
                             </blockquote>
                     </dd>
                     <dt><code>&lt;abbr&gt;</code>:</dt>
-                    <dd>Esta tag, apesar de não ser realmente uma citação, é utilizada para marcarmos abreviações no nosso texto, deixando uma caixa de texto com o texto completo.<br> Exemplo: <abbr title="HyperText Markup Language">HTML</abbr> ou <abbr title="Organização das Nações Unidas">ONU</abbr>.</dd>
+                    <dd>Esta tag, apesar de não ser realmente uma citação, é utilizada para marcarmos abreviações no nosso texto, deixando uma caixa de texto com o texto completo. Exemplo: <abbr title="HyperText Markup Language">HTML</abbr> ou <abbr title="Organização das Nações Unidas">ONU</abbr>.</dd>
             
                     <dt><code>&lt;address&gt;</code>:</dt>
                     <dd>
-                        Esta tag é uma tag que marca um endereço digital, como um e-mail, não é aconselhavel utiliza-lá para endereços físicos. <br> Exemplo:
+                        Esta tag é uma tag que marca um endereço digital, como um e-mail, não é aconselhavel utiliza-lá para endereços físicos. Exemplo:
                         <address>Emailaleatorio@gmail.com</address>
                     </dd>
                 </dl>

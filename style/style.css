@@ -1,9 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*Primeiros testes com Media Queries */
+
+@media only screen and (max-width: 1440px){
+    .image-map-test{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .dl-list-imagens dd{
+        flex-wrap: wrap;
+    }
+}
+
+:root{
+    --text-color: white;
+}
+
 * {
     padding: 0;
     margin: 0;
-    text-decoration: none;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -13,11 +30,18 @@ html{
   overflow-y: scroll;
 }
 
+p a{
+    text-decoration:none;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
 .start-screen{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(-145deg, rgb(123, 83, 153), rgb(55, 23, 80));
+    background-image: linear-gradient(-145deg, rgb(19, 4, 31), rgb(55, 23, 80));
     overflow-y: hidden;
+    color: var(--text-color);
 }
 
 .row-center{
@@ -37,7 +61,7 @@ html{
     padding-left: 30px;
     padding-right: 30px;
     font-size: 24px;
-    
+    color: var(--text-color);
 }
 
 .mid-content-fp li{
@@ -107,11 +131,11 @@ html{
 
 .content{
     min-height: 100vh;
-}
-
-.link-def a{
-    color: white;
-    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    min-height: 100vh;
+    margin: auto;
+    color: var(--text-color);
 }
 
 .text-center{
@@ -153,6 +177,7 @@ html{
 }
 
 .start-nav a{
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,23 +197,12 @@ html{
     font-weight: 500;
 }
 
-.main-content-fp{
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    min-height: 100vh;
-    margin: auto;
-}
-
 .bg{
     background-image: linear-gradient(145deg, rgb(123, 83, 153), rgb(55, 23, 80));
 }
 
 .list{
     list-style: none;
-}
-
-.white{
-    color: white;
 }
 
 .nav-bar{
@@ -204,14 +218,16 @@ html{
 }
 
 .nav-bar ul{
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
 .nav-bar a {
+    text-decoration: none;
     display: inline-block;
-    color: white;
+    color: var(--text-color);
     padding: 10px;
     font-weight: 400;
     border-bottom: solid 2px rgb(140, 0, 255);
@@ -228,16 +244,18 @@ html{
     width: 75%;
     background-color: rgba(0, 0, 0, 0.2);
     margin: auto;
-    color: white;
+    color: var(--text-color);
     padding: 20px;
     line-height: 1.6;
     text-align: justify;
+    position: relative
 }
 
 .main-content p{
     padding: 10px;
     margin: 10px;
     font-size: 20px;
+    text-indent: 20px;
 }
 
 .main-content h1{
@@ -245,7 +263,7 @@ html{
     text-align: center;
     padding: 10px;
     margin-bottom: 30px;
-    border-bottom: solid 5px white;
+    border-bottom: solid 5px var(--text-color);
 }
 
 .main-content h2{
@@ -264,7 +282,7 @@ html{
     padding: 10px;
     border-radius: 5px;
     background-color: rgb(51, 51, 51);
-    color:white;
+    color:var(--text-color);
     margin: 5px;
 }
 
@@ -280,3 +298,100 @@ html{
     margin-bottom: 10px;
     text-indent: 20px;
 }
+
+.main-content blockquote{
+    font-style: italic;
+    text-indent: 0px;
+    background: rgb(41, 2, 63);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+.main-content mark{
+    background-color: rgb(153, 255, 0);
+    color: black;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.main-content abbr{
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.main-content address {
+    font-weight: 500;
+    font-style: normal;
+}
+
+.main-content code{
+    background-color: rgb(51, 51, 51);
+    padding: 4px;
+    border-radius: 5px;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+figure img{
+    width: 100%;
+}
+
+figure figcaption {
+    display: flex;
+    position: absolute;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    min-height: 10%;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 500ms ease-in-out;
+}
+
+figure:hover figcaption{
+    opacity: 1;
+}
+
+.list-imagens{
+    margin-left: 40px;
+    list-style-type: disc;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.list-imagens li{
+    margin-bottom: 20px;
+}
+
+.dl-list-imagens{
+    font-size: 24px;
+    margin-left: 30px;
+}
+
+.dl-list-imagens dd{
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    gap:40px;
+}
+
+.dl-list-imagens dd img{
+    min-width: 200px;
+    border-radius: 10px;
+}
+
+.image-map-test{
+    display: block;
+    margin: auto;
+}
+
