@@ -319,6 +319,26 @@ p a{
     border-radius: 5px;
 }
 
+.main-content table{
+    width: 50%;
+    margin: auto;
+    min-height: 400px;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.main-content table th{
+    background-color: rgb(55, 2, 71);
+    border-radius: 15px;
+}
+
+.main-content table td{
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 figure{
     display: flex;
     flex-direction: column;
@@ -382,11 +402,13 @@ figure:hover figcaption{
     margin: auto;
 }
 
+
 /*Primeiros testes com Media Queries */
 
 @media only screen and (max-width: 1440px){
     .image-map-test{
         display: none;
+        /*Gambiarra para o Image Map não quebrar o site no Mobile*/
     }
 }
 
