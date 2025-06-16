@@ -264,6 +264,12 @@ p a{
     padding: 7px;
 }
 
+.main-content h4{
+    font-size: 24px;
+    font-weight: 400;
+    padding: 7px;
+}
+
 .main-content dt code{
     display: inline-block;
     padding: 10px;
@@ -319,6 +325,23 @@ p a{
     border-radius: 5px;
 }
 
+.code-block{
+    padding: 5px;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 15px;
+    border: 4px solid rgb(140, 0, 255);
+    background-color: rgb(51, 51, 51);
+}
+
+.code-block code{
+    background-color: transparent;
+    padding: 10px;
+    display: block;
+    min-width: 300px;
+    text-align: center;
+}
+
 .main-content table{
     width: 50%;
     margin: auto;
@@ -337,6 +360,24 @@ p a{
 .main-content table td{
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.2);
+}
+
+.main-content form{
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.main-content input:not([type="radio"],[type="checkbox"]){
+    display: block;
+    width: 100%;
+}
+
+.main-content input{
+    display: flex;
 }
 
 figure{
@@ -368,6 +409,8 @@ figure figcaption {
 figure:hover figcaption{
     opacity: 1;
 }
+
+/*Corrigir nomenclatura posteriormente*/
 
 .list-imagens{
     margin-left: 40px;
@@ -402,6 +445,15 @@ figure:hover figcaption{
     margin: auto;
 }
 
+.types-input{
+    list-style: none;
+    padding: 10px;
+}
+
+.types-input li{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
 
 /*Primeiros testes com Media Queries */
 
