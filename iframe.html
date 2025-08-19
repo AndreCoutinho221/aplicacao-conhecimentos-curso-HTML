@@ -43,10 +43,10 @@
             <section>
                 <h2>Incorporando páginas do próprio site</h2>
                 <p>Tendo em vista que podemos utilizar sites externos em nossa página, por que não poderiamos usar páginas internas? Basta trocar o <code>src</code> para apontar para uma página dentro do nosso site como foi feito logo abaixo</p>
-                <iframe src="index.html" width="50%" height="300px"></iframe>
+                <iframe src="index.html" class="iframes"></iframe>
                 <h2>Interação dos Iframes com a tag <code>&lt;a&gt;</code></h2>
                 <p>Visto que podemos abrir páginas web nos Iframes, isso abre possibilidade de usarmos a tag de âncora para abrir links de sites no nosso site, funcionando como um navegador, para isso, precisamos adicionarmos um <code>name</code> ao nosso Iframe e passarmos ele através do atributo <code>target</code> da tag de âncora para ela</p>
-                <ul>
+                <ul class="list-menu-iframe">
                     <li><a href ='index.html' alt="Ir para a página inicial" target="iframe-incorporado">Página Inicial</a></li>
                     <li><a href ='cabecalho.html' alt="Ir para a página que explica o uso de Cabeçalhos" target="iframe-incorporado">Cabeçalho</a></li>
                     <li><a href='formatacao.html' alt="Ir para a página que explica como formatar seu texto em HTML" target="iframe-incorporado">Formatação e Citações</a></li>
@@ -59,7 +59,7 @@
                     <li><a href='listas.html' alt="Ir para a página que explica como utilizar listas em HTML" target="iframe-incorporado">Listas</a></li>
                     <li><a href="semantica.html" alt="Ir para a página que explica como escrever HTML da forma correta" target="iframe-incorporado">Semântica</a></li>
                 </ul>
-                <iframe name="iframe-incorporado" src="" width="50%" height="300px"></iframe>
+                <iframe name="iframe-incorporado" src="index.html" class="iframes"></iframe>
             </section>
         </article>
     </main>
