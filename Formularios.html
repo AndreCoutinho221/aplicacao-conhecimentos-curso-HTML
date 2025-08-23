@@ -89,77 +89,95 @@
         <section>
             <h2>Implementando um formulário</h2>
             <p>Abaixo há um formulário contendo a aplicação prática dos conceitos abordados acima:</p>
-            <form>
-                <label for="nome">Nome: </label>
-
-                <input type="text" id="nome" placeholder="Digite seu nome" required>
-
-                <label for="idade">Idade: </label>
-
-                <input type="number" id="idade" placeholder="Digite sua idade" required>
-
-                <label for="email">E-mail: </label>
-
-                <input type="email" id="email" placeholder="Digite seu e-mail" required>
-
-                <label for="senha">Senha: </label>
-
-                <input type="password" id="senha" placeholder="Crie uma senha" required>
+            <form class="form">
+                <fieldset class="fieldset-text">
+                    <label for="nome">Nome: </label>
+    
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+    
+                    <label for="idade">Idade: </label>
+    
+                    <input type="number" id="idade" placeholder="Digite sua idade" required>
+    
+                    <label for="email">E-mail: </label>
+    
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+    
+                    <label for="senha">Senha: </label>
+    
+                    <input type="password" id="senha" placeholder="Crie uma senha" required>
+                </fieldset>
 
                 <label>Exemplo Rádio 1</label>
 
-                <label for="A1">A</label>
-                <input type="radio" name="quest_1" id="A1">
-
-                <label for="B1">B</label>
-                <input type="radio" name="quest_1" id="B1">
-
-                <label for="C1">C</label>
-                <input type="radio" name="quest_1" id="C1">
-
-                <label for="D1">D</label>
-                <input type="radio" name="quest_1" id="D1">
+                <fieldset class="fieldset-radio">
+                    <label for="A1">A</label>
+                    <input type="radio" name="quest_1" id="A1">
+    
+                    <label for="B1">B</label>
+                    <input type="radio" name="quest_1" id="B1">
+    
+                    <label for="C1">C</label>
+                    <input type="radio" name="quest_1" id="C1">
+    
+                    <label for="D1">D</label>
+                    <input type="radio" name="quest_1" id="D1">
+                </fieldset>
 
                 <label>Exemplo Rádio 2</label>
 
-                <label for="A2">A</label>
-                <input type="radio" name="quest_2" id="A2">
+                <fieldset class="fieldset-radio">
+                    <label for="A2">A</label>
+                    <input type="radio" name="quest_2" id="A2">
+    
+                    <label for="B2">B</label>
+                    <input type="radio" name="quest_2" id="B2">
+    
+                    <label for="C2">C</label>
+                    <input type="radio" name="quest_2" id="C2">
+    
+                    <label for="D2">D</label>
+                    <input type="radio" name="quest_2" id="D2">
+                </fieldset>
 
-                <label for="B2">B</label>
-                <input type="radio" name="quest_2" id="B2">
-
-                <label for="C2">C</label>
-                <input type="radio" name="quest_2" id="C2">
-
-                <label for="D2">D</label>
-                <input type="radio" name="quest_2" id="D2">
-
-                <label>Selecione uma cor</label>
-                <select required>
-                    <option selected disabled>Selecione uma Cor</option>
-                    <option>Vermelho</option>
-                    <option>Azul</option>
-                    <option>Amarelo</option>
-                    <option>Verde</option>
-                    <option>Preto</option>
-                    <option>Branco</option>
-                </select>
+                <fieldset>
+                    <label>Selecione uma cor</label>
+                    <select required class="select-box">
+                        <option selected disabled>Selecione uma Cor</option>
+                        <option>Vermelho</option>
+                        <option>Azul</option>
+                        <option>Amarelo</option>
+                        <option>Verde</option>
+                        <option>Preto</option>
+                        <option>Branco</option>
+                    </select>
+                </fieldset>
                 
-                <label for="aceite_1">Exemplo checkbox 1</label>
-                <input type="checkbox" id="aceite_1" required>
-                
-                <label for="aceite_2">Exemplo checkbox 2</label> 
-                <input type="checkbox" id="aceite_2" required>
-                
-                <label for="aceite_3">Exemplo checkbox 3</label>
-                <input type="checkbox" id="aceite_3">
-
+                <fieldset class="fieldset-checkbox">
+                    <fieldset class="check">
+                        <input type="checkbox" id="aceite_1" required>
+                        <label for="aceite_1">Exemplo checkbox 1</label>
+                    </fieldset>
+                    
+                    <fieldset class="check">
+                        <input type="checkbox" id="aceite_2" required>
+                        <label for="aceite_2">Exemplo checkbox 2</label>
+                    </fieldset>
+                    
+                    <fieldset class="check">
+                        <input type="checkbox" id="aceite_3">
+                        <label for="aceite_3">Exemplo checkbox 3</label>   
+                    </fieldset>
+                </fieldset>
                 <label>Deixe um comentário!</label>
+                <fieldset>                        
+                    <textarea class="textbox-form" placeholder="Digite aqui seu comentário!"></textarea>
+                </fieldset>
 
-                <textarea rows="15" cols="150" placeholder="Digite aqui seu comentário!"></textarea>
-
-                <button type="submit">Enviar</button>
-                <button type="reset">Resetar formulário</button>
+                <fieldset class="fieldset-buttons">
+                    <button type="submit" class="form-button">Enviar</button>
+                    <button type="reset" class="form-button">Resetar formulário</button>
+                </fieldset>
             </form>
         </section>
     </main>
