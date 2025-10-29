@@ -8,9 +8,9 @@
     <meta name="description" content="Como trabalhar com listas em HTML">
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body class="bg">
     <header>
-        <nav>
+        <nav class="nav-bar">
             <ul>
                 <li><a href ='index.html' title="Ir para a página inicial">Página Inicial</a></li>
                 <li><a href ='cabecalho.html' title="Ir para a página que explica o uso de Cabeçalhos">Cabeçalho</a></li>
@@ -26,7 +26,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="main-content">
         <!--Antes dos estilos CSS-->
         <article>
             <h1>Trabalhando com Listas em HTML</h1>
@@ -36,14 +36,16 @@
                 <h2>Listas não ordenadas</h2>
                 <p>Listas não ordenadas como o nome ja diz, são listas que não tem uma ordem nos itens apresentados, no HTML padrão, elas possuem uma bolinha ao lado esquerdo para sinalizar cada item.</p>
                 <p>Para iniciarmos uma lista não ordenada usamos a tag <code>&lt;ul&gt;</code> que irá conter a outra tag da lista, a tag <code>&lt;li&gt;</code> que é reponsável por adicionar os itens na lista, cada uma destas tags representa um item dentro de uma lista, ela pode conter outras tags, como é feito no caso dos menus. Confira abaixo o código de uma lista não ordenada e logo após a aplicação dele.</p>
-                <code>
-                    &lt;ul&gt;<br>
-                    &nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
-                    &nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
-                    &nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
-                    &lt;/ul&gt;<br>
-                </code>
-                <ul>
+                <div class="code-block">
+                    <code>
+                        &lt;ul&gt;<br>
+                        &nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
+                        &nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+                        &nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
+                        &lt;/ul&gt;<br>
+                    </code>
+                </div>
+                <ul class="listas-pag-listas">
                     <li>Item 1</li>
                     <li>Item 2</li>
                     <li>Item 3</li>
@@ -52,14 +54,16 @@
             <section>
                 <h2>Listas ordenadas</h2>
                 <p>Listas ordenadas são semelhantes as listas não ordenadas, porém como o nome ja diz, são listas com uma ordem. Elas são apresentadas em uma sequência de números, ou seja, o primeiro item terá o número 1, o segundo o número 2 e assim suscessivamente. A tag utilizada para formarmos uma lista ordenada é a tag <code>&lt;ol&gt;</code> que assim como a ul conterá as tags <code>&lt;li&gt;</code>. Há também alguns tipos de lista ordenadas, o padrão é o tipo de números, mas também existem os tipos de letras maiúsculas(A) e minúsculas(a), e romanas minúsculas(i) e maiúsculas(I), podemos alterar o tipo através do atributo <code>type</code>. Confira abaixo o código de uma lista ordenada e logo após a aplicação dele.</p>
-                <code>
-                    &lt;ol&gt;<br>
-                    &nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
-                    &nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
-                    &nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
-                    &lt;/ol&gt;<br>
-                </code>
-                <ol>
+                <div class="code-block">
+                    <code>
+                        &lt;ol&gt;<br>
+                        &nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
+                        &nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+                        &nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
+                        &lt;/ol&gt;<br>
+                    </code>
+                </div>
+                <ol class="listas-pag-listas">
                     <li>Item 1</li>
                     <li>Item 2</li>
                     <li>Item 3</li>
@@ -68,14 +72,16 @@
             <section>
                 <h2>Listas de definição</h2>
                 <p>Listas de definição tem uma estrutura um pouco diferente das outras listas, elas são iniciadas pela tag <code>&lt;dl&gt;</code> e contém tags <code>&lt;dt&gt;</code> e tags <code>&lt;dd&gt;</code>. As tags <code>&lt;dt&gt;</code> são as tags que contém o que você quer definir, como um termo, uma palavra, um item, etc. Já a tag <code>&lt;dd&gt;</code> contém a definição do item, este tipo de lista foi muito utilizado na construção deste site, sendo perfeitamente visível na página de <a href="imagens.html">imagens</a>. Cada tag <code>&lt;dt&gt;</code> precisa ser seguida de uma tag <code>&lt;dd&gt;</code>, para que a lista seja exibida da maneira correta. Confira abaixo o código de uma lista de definição e a aplicação do código logo abaixo.</p>
-                <code>
-                    &lt;dl&gt;<br>
-                    &nbsp;&lt;dt&gt;Item 1&lt;/dt&gt;<br>
-                    &nbsp;&lt;dd&gt;Definição do Item 1&lt;/dd&gt;<br>
-                    &nbsp;&lt;dt&gt;Item 2&lt;/dt&gt;<br>
-                    &nbsp;&lt;dd&gt;Definição do Item 2&lt;/dd&gt;<br>
-                    &lt;/dl&gt;<br>
-                </code>
+                <div class="code-block">
+                    <code>
+                        &lt;dl&gt;<br>
+                        &nbsp;&lt;dt&gt;Item 1&lt;/dt&gt;<br>
+                        &nbsp;&lt;dd&gt;Definição do Item 1&lt;/dd&gt;<br>
+                        &nbsp;&lt;dt&gt;Item 2&lt;/dt&gt;<br>
+                        &nbsp;&lt;dd&gt;Definição do Item 2&lt;/dd&gt;<br>
+                        &lt;/dl&gt;<br>
+                    </code>
+                </div>
                 <dl>
                     <dt>Item 1</dt>
                     <dd>Definição do Item 1</dd>
@@ -87,22 +93,24 @@
                 <h2>Listas aninhadas</h2>
                 <p>Listas aninhadas são listas dentro de listas, ou seja, uma lista não ordenada pode conter uma lista não ordenada, uma lista de descrição ou até mesmo uma outra lista ordenada. Confira abaixo algumas aplicações deste tipo de lista.</p>
                 <p>Lista ordenada dentro de uma lista ordenada:</p>
-                <code>
-                    &lt;ol&gt;<br>
-                    &nbsp;&lt;li&gt;Item 1<br>
-                    &nbsp;&nbsp;&lt;ol&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1.1&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1.2&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1.3&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;/ol&gt;<br>
-                    &nbsp;&lt;/li&gt;<br>
-                    &nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
-                    &nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
-                    &lt;/ol&gt;<br>
-                </code>
-                <ol>
+                <div class="code-block">
+                    <code>
+                        &lt;ol&gt;<br>
+                        &nbsp;&lt;li&gt;Item 1<br>
+                        &nbsp;&nbsp;&lt;ol&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1.1&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1.2&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1.3&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;/ol&gt;<br>
+                        &nbsp;&lt;/li&gt;<br>
+                        &nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+                        &nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
+                        &lt;/ol&gt;<br>
+                    </code>
+                </div>
+                <ol class="listas-pag-listas">
                     <li>Item 1
-                        <ol>
+                        <ol class="listas-pag-listas">
                             <li>Item 1.1</li>
                             <li>Item 1.2</li>
                             <li>Item 1.3</li>
@@ -112,22 +120,24 @@
                     <li>Item 3</li>
                 </ol>
                 <p>Lista não ordenada dentro de uma lista ordenada:</p>
-                <code>
-                    &lt;ol&gt;<br>
-                    &nbsp;&lt;li&gt;Item 1<br>
-                    &nbsp;&nbsp;&lt;ul&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1.1&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1.2&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1.3&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;/ul&gt;<br>
-                    &nbsp;&lt;/li&gt;<br>
-                    &nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
-                    &nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
-                    &lt;/ol&gt;<br>
-                </code>
-                <ol>
+                <div class="code-block">
+                    <code>
+                        &lt;ol&gt;<br>
+                        &nbsp;&lt;li&gt;Item 1<br>
+                        &nbsp;&nbsp;&lt;ul&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1.1&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1.2&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1.3&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;/ul&gt;<br>
+                        &nbsp;&lt;/li&gt;<br>
+                        &nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+                        &nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
+                        &lt;/ol&gt;<br>
+                    </code>
+                </div>
+                <ol class="listas-pag-listas">
                     <li>Item 1
-                        <ul>
+                        <ul class="listas-pag-listas">
                             <li>Item 1.1</li>
                             <li>Item 1.2</li>
                             <li>Item 1.3</li>
@@ -137,22 +147,24 @@
                     <li>Item 3</li>
                 </ol>
                 <p>Lista não ordenada dentro de uma lista de definição:</p>
-                <code>
-                    &lt;ol&gt;<br>
-                    &nbsp;&lt;li&gt;Item 1<br>
-                    &nbsp;&nbsp;&lt;dl&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&lt;dt&gt;Item 1.1&lt;/dt&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&lt;dd&gt;Definição do Item 1.1&lt;/dd&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&lt;dt&gt;Item 1.2&lt;/dt&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&lt;dd&gt;Definição do Item 1.2&lt;/dd&gt;<br>
-                    &nbsp;&nbsp;&lt;/dl&gt;<br>
-                    &nbsp;&lt;/li&gt;<br>
-                    &nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
-                    &nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
-                    &lt;/ol&gt;<br>
-                </code>
-                <ol>
-                    <li>Item 1
+                <div class="code-block">
+                    <code>
+                        &lt;ol&gt;<br>
+                        &nbsp;&lt;li&gt;Item 1<br>
+                        &nbsp;&nbsp;&lt;dl&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&lt;dt&gt;Item 1.1&lt;/dt&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&lt;dd&gt;Definição do Item 1.1&lt;/dd&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&lt;dt&gt;Item 1.2&lt;/dt&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&lt;dd&gt;Definição do Item 1.2&lt;/dd&gt;<br>
+                        &nbsp;&nbsp;&lt;/dl&gt;<br>
+                        &nbsp;&lt;/li&gt;<br>
+                        &nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+                        &nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
+                        &lt;/ol&gt;<br>
+                    </code>
+                </div>
+                <ol class="listas-pag-listas">
+                    <li class="listas-pag-listas">Item 1
                         <dl>
                             <dt>Item 1.1</dt>
                             <dd>Definição do Item 1.1</dd>
